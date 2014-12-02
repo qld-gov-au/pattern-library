@@ -15,8 +15,7 @@ XHTML 1.0 | Screenshot
         <li class="twitter">Follow us on Twitter <a href="http://twitter.com/qgovonline">@qgovonline</a></li>
     </ul>
 </div>
-```
-|
+``` | 
 ![Contacts](images/aside-contact.png)
 
 ## Emergency contact
