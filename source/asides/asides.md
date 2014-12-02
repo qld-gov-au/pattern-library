@@ -17,7 +17,7 @@ XHTML 1.0
 </div>
 ```
 
-![Contacts](/images/aside-contact.png)
+![Contacts](images/aside-contact.png)
 
 ## Emergency contact
 
