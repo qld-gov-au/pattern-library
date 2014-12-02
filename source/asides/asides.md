@@ -6,8 +6,8 @@
 
 ## Contacts
 
-XHTML 1.0 | Screenshot
---------- | ----------
+XHTML 1.0 
+
 ```html
 <div class="aside contact">
     <ul>
@@ -15,7 +15,9 @@ XHTML 1.0 | Screenshot
         <li class="twitter">Follow us on Twitter <a href="http://twitter.com/qgovonline">@qgovonline</a></li>
     </ul>
 </div>
-``` | 
+```
+
+Screenshot 
 ![Contacts](images/aside-contact.png)
 
 ## Emergency contact
