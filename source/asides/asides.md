@@ -17,7 +17,8 @@ XHTML 1.0
 </div>
 ```
 
-Screenshot 
+Screenshot
+
 ![Contacts](images/aside-contact.png)
 
 ## Emergency contact
@@ -29,6 +30,8 @@ XHTML 1.0
     <p>If you are in a crisis situation, call <span class="tel">13 74 68</span></p>
 </div>
 ```
+
+Screenshot
 
 ![Emergency contact](images/aside-emergency-contact.png)
 
@@ -44,5 +47,7 @@ XHTML 1.0
 Games can be played a variety of ways, including puffing into a microphone, interactive whiteboard and using the space bar.
 </p></div>
 ```
+
+Screenshot
 
 ![Tip](images/tip-short.png)
