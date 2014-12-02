@@ -7,7 +7,7 @@
 
 ## Contacts
 
-XHTML 1.0 
+### XHTML 1.0 
 
 ```html
 <div class="aside contact">
@@ -18,13 +18,13 @@ XHTML 1.0
 </div>
 ```
 
-Screenshot
+### Screenshot
 
 ![Contacts](images/aside-contact.png)
 
 ## Emergency contact
 
-XHTML 1.0
+### XHTML 1.0
 
 ```html
 <div class="aside emergency-contact">
@@ -32,13 +32,13 @@ XHTML 1.0
 </div>
 ```
 
-Screenshot
+### Screenshot
 
 ![Emergency contact](images/aside-emergency-contact.png)
 
 ## Tip
 
-XHTML 1.0
+### XHTML 1.0
 
 ```html
 <div class="aside tip">
@@ -49,7 +49,7 @@ Games can be played a variety of ways, including puffing into a microphone, inte
 </p></div>
 ```
 
-Screenshot
+### Screenshot
 
 ![Tip](images/tip-short.png)
 
@@ -57,7 +57,7 @@ Screenshot
 
 Use this for events on a franchise landing page.
 
-XHTML 1.0
+### XHTML 1.0
 
 ```html
 <div class="aside events">
@@ -68,7 +68,7 @@ XHTML 1.0
 </div>
 ```
 
-Screenshot
+### Screenshot
 
 [Events from CSV datasets](https://govdex.gov.au/confluence/display/SSQSWE/Events+from+CSV+datasets) support is available
 
