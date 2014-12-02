@@ -1,14 +1,35 @@
 # Asides
 
-- Contacts
+- [Contacts](#contacts)
 - [Emergency contact](#emergency-contact)
 - [Tip](#tip)
 
+## Contacts
+
+XHTML 1.0
+
+```html
+<div class="aside contact">
+    <ul>
+        <li class="telephone">General enquiries <span class="tel">13 74 68</span></li>
+        <li class="twitter">Follow us on Twitter <a href="http://twitter.com/qgovonline">@qgovonline</a></li>
+    </ul>
+</div>
+```
+
 ## Emergency contact
 
+XHTML 1.0
 
+```html
+<div class="aside emergency-contact">
+    <p>If you are in a crisis situation, call <span class="tel">13 74 68</span></p>
+</div>
+```
 
 ## Tip
+
+XHTML 1.0
 
 ```html
 <div class="aside tip">
