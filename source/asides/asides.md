@@ -6,8 +6,8 @@
 
 ## Contacts
 
-XHTML 1.0
-
+XHTML 1.0 | Screenshot
+--------- | ----------
 ```html
 <div class="aside contact">
     <ul>
@@ -16,7 +16,7 @@ XHTML 1.0
     </ul>
 </div>
 ```
-
+|
 ![Contacts](images/aside-contact.png)
 
 ## Emergency contact
