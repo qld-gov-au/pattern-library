@@ -72,7 +72,7 @@ Use this for events on a franchise landing page.
 
 [Events from CSV datasets](https://govdex.gov.au/confluence/display/SSQSWE/Events+from+CSV+datasets) support is available
 
-XHTML 1.0
+### XHTML 1.0
 
 ```html
 <div class="aside events">
@@ -124,6 +124,6 @@ XHTML 1.0
 </div>
 ```
 
-Screenshot
+### Screenshot
 
 ![Events](images/aside-events.png)
