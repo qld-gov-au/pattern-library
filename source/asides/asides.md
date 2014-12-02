@@ -3,6 +3,7 @@
 - [Contacts](#contacts)
 - [Emergency contact](#emergency-contact)
 - [Tip](#tip)
+- [Events](#events)
 
 ## Contacts
 
@@ -51,3 +52,78 @@ Games can be played a variety of ways, including puffing into a microphone, inte
 Screenshot
 
 ![Tip](images/tip-short.png)
+
+## Events
+
+Use this for events on a franchise landing page.
+
+XHTML 1.0
+
+```html
+<div class="aside events">
+  <div class="section-header">
+    <h2>Upcoming events</h2>
+  </div>
+  <!--#include virtual="/assets/includes/dynamic/events/upcoming.php?dataset=education-events" -->
+</div>
+```
+
+Screenshot
+
+[Events from CSV datasets](https://govdex.gov.au/confluence/display/SSQSWE/Events+from+CSV+datasets) support is available
+
+XHTML 1.0
+
+```html
+<div class="aside events">
+    <div class="section-header">
+        <h2>Upcoming events</h2>
+    </div>
+ 
+    <div class="section mar">
+        <h3>March</h3>
+        <ol>
+            <li>
+                <p>26 Mar</p>
+                <h4>
+                    <a href="http://www.epilepsyaustralia.net/Purple_Day/Purple_Day.aspx">Purple Day for Epilepsy</a>
+                </h4>
+            </li>
+        </ol>
+    </div>
+ 
+    <div class="section apr">
+        <h3>April</h3>
+        <ol>
+            <li>
+                <p class="date">2 Apr</p>
+                <h4>
+                    <a href="http://www.lightitupblue.com.au/">World Autism Awareness Day</a>
+                </h4>
+            </li>
+            <li class="even">
+                <p class="date">11 Apr</p>
+                <h4>
+                    <a href="http://parkinsons-qld.org.au/events/world-parkinsons-day.html">World Parkinson's Day</a>
+                </h4>
+            </li>
+            <li>
+                <p class="date">20 Apr</p>
+                <h4>
+                    <a href="http://www.msswimathon.com.au/swim-locations/cairns">Cairns MS Swimathon</a>
+                </h4>
+            </li>
+            <li class="even">
+                <p>27 Apr</p>
+                <h4>
+                    <a href="http://www.msswimathon.com.au/swim-locations/townsville">Townsville MS Swimathon</a>
+                </h4>
+            </li>
+        </ol>
+    </div>
+</div>
+```
+
+Screenshot
+
+![Events](images/aside-events.png)
