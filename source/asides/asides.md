@@ -29,6 +29,8 @@ XHTML 1.0
 </div>
 ```
 
+![Emergency contact](images/aside-emergency-contact.png)
+
 ## Tip
 
 XHTML 1.0
@@ -41,3 +43,5 @@ XHTML 1.0
 Games can be played a variety of ways, including puffing into a microphone, interactive whiteboard and using the space bar.
 </p></div>
 ```
+
+![Tip](images/tip-short.png)
