@@ -143,3 +143,45 @@ Use this for events on a franchise landing page.
 ### Screenshot
 
 ![Feedback](images/aside-feedback.png)
+
+## Sponsors
+
+Sponsor logos can be featured in an aside, using a list of linked images.
+Each image should be the sponsor's logo and linked to their website. No logo is to be displayed larger than the Coat of Arms (50px high).
+
+### XHTML 1.0 example
+
+```html
+<div class="aside sponsors">
+    <h2>Sponsors</h2>
+ 
+    <p>Seniors Week 2012 is proudly sponsored by:</p>
+    <ul>
+        <li><a href="http://www.beyondblue.org.au/"><img src="//www.qld.gov.au/seniors/assets/images/asides/recreation-staying-connected/beyondblue-logo.jpg" alt="beyondblue" /></a></li>
+        <li><a href="http://www.4bc.com.au/"><img src="//www.qld.gov.au/seniors/assets/images/asides/recreation-staying-connected/4bc-logo.jpg" alt="4BC" /></a></li>
+        <li><a href="http://www.4bh.com.au/"><img src="//www.qld.gov.au/seniors/assets/images/asides/recreation-staying-connected/4bh-logo.jpg" alt="4BH"/></a></li>
+    </li>
+</div>
+```
+
+### Screenshot
+
+![Sponsors](images/aside-sponsors.png)
+
+## Beta indicator
+
+A website/service that is released in a beta state may indicate this with an aside.
+
+### Example (from data.qld.gov.au, November 2012)
+
+```html
+<div class="aside beta">
+    <h2>Beta release</h2>
+    <p>This is the beta (trial) version of the Queensland Government data hub. It gives access to a limited number of datasets that are already publicly available.</p>
+    <p>You can <a href="#page-feedback">suggest other datasets</a> to be included.</p>
+</div>
+```
+
+### Screenshot
+
+![Beta indicator](images/aside-beta-indicator.png)
