@@ -38,8 +38,8 @@ In the above example, /housing/assets/includes/after-hours-maintenance.html is t
 
 Parameter name | Description | Example
 -------------- | ----------- | -------
-publicHolidays | Always include content on public holidays? | true|false
-weekends | Always include content on weekends? |  true```html|```false
+publicHolidays | Always include content on public holidays? | true &vert; false
+weekends | Always include content on weekends? |  true &vert; false
 before | include content before this time, HHmm format | 0730 (7.30am) 
 after | include content on or after this time, HHmm format | 1700 (5.00pm) 
 virtual | Path to your include file | /housing/assets/includes/after-hours-maintenance.html
