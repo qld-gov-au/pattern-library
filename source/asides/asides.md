@@ -127,3 +127,19 @@ Use this for events on a franchise landing page.
 ### Screenshot
 
 ![Events](images/aside-events.png)
+
+## Feedback
+
+### XHTML 1.0
+
+```html
+<div class="aside feedback">
+    <h2>Tell us what you think</h2>
+    <img src="/assets/images/skin/icon-feedback.png" alt="" class="cut-in-icon" />
+    <p>This site has been designed and developed for you and we would <a href="#page-feedback">love to hear what you think</a> of it.</p>
+</div>
+```
+
+### Screenshot
+
+![Feedback](images/aside-feedback.png)
