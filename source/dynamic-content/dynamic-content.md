@@ -1,5 +1,9 @@
 # Dynamic content
 
+- [Content expiry (XSSI)](#content-expiry)
+- [Time-based content](#time-based-content)
+- [Datasets](#datasets)
+
 ## Content expiry (XSSI)
 
 These XSSI instructions will work for Apache2, the web server on qld.gov.au

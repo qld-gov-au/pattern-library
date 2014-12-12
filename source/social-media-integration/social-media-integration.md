@@ -1,5 +1,8 @@
 # Social media integration
 
+- [Twitter](#twitter)
+- [Facebook](#facebook)
+
 ## Twitter
 Please contact the QGov Online core team to have each new feed configured. The following pattern will need to be included in your pages:
 ```html

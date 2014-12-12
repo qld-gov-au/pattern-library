@@ -1,4 +1,10 @@
 # Lightbox
+
+- [Images](#images)
+- [Image gallery](#image-gallery)
+- [Definition](#definition)
+- [Map](#map)
+
 A lightbox is a user interface (UI) pattern that displays content inside of a popup layer superimposed over the top of the current page (the current page is still visible under a dark translucent overlay).
 
 An accessible lightbox has been integrated with the template and can be invoked in a number of predefined situations.
