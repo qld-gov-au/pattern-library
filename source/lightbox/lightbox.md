@@ -7,9 +7,9 @@ An accessible lightbox has been integrated with the template and can be invoked 
  * If you would like to use a lightbox for a different situation, please contact the Smart Service core team Product Manager to discuss adding the new use case to the template
  * Please don't use the following hooks for situations other than the ones intended. If you do misuse them, we can't guarantee that they will continue to work as expected (e.g. the approach for presenting definitions may change in ways that are appropriate for definitions, but not for your situation).
 
- **Lightbox examples:**
+**Lightbox examples:**
  * [The Great Queensland Week Adventure Trail Photo Gallery](https://www.qld.gov.au/about/events-awards-honours/events/queensland-week/adventure-trail/)
- * [Queensland Greats Awards Photo Gallery](www.qld.gov.au/about/events-awards-honours/awards/qld-greats-awards/photo-gallery/)
+ * [Queensland Greats Awards Photo Gallery](http://www.qld.gov.au/about/events-awards-honours/awards/qld-greats-awards/photo-gallery/)
 
 ## Images
 Any link directly to an image will display the image in a lightbox and use the title attribute on the link as a caption for the displayed image.
@@ -56,6 +56,7 @@ Or from another page:
 ```html
 <a class="definition" href="definitions/#queenslander">queenslander</a>
 ```
+
 The definition block should be marked up as:
 ### XHTML 1.0
 ```html
