@@ -14,8 +14,8 @@ Icon should be 124px square.
 3. you can safely remove *style* setting *border: 0* from the iTunes link. Borders are removed by the qgov stylesheets.
 4. append ' for iPhone/iPad' to the alt text for iTunes links: "ReadyQld by Volunteering Queensland Inc for iPhone/iPad"
 5. prepend app name to android market link alt text: "ReadyQld---Available in Google Play"
-### XHTML
 
+### XHTML
 ```html
 <div class="cut-in app">
     <img src="/examples/assets/eg-readyqld_icon.png" alt="ReadyQld" width="124" class="icon" />
@@ -35,4 +35,4 @@ Icon should be 124px square.
 ```
 
 ### Screenshot
-![App store pattern](app-store-pattern.jpg)
+![App store pattern](images/app-store-pattern.jpg)
