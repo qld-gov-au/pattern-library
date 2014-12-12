@@ -4,6 +4,9 @@
 - [Emergency contact](#emergency-contact)
 - [Tip](#tip)
 - [Events](#events)
+- [Feedback](#feedback)
+- [Sponsors](#sponsors)
+- [Beta indicator](#beta-indicator) 
 
 ## Contacts
 
