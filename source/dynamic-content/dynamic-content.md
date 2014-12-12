@@ -46,7 +46,7 @@ virtual | Path to your include file | /housing/assets/includes/after-hours-maint
 
 ## Datasets
 
-On www.qld.gov.au we can handle simple datasets in CSV format and create a dynamic include that supports a search form to filter the list of results displayed.
+On qld.gov.au we can handle simple datasets in CSV format and create a dynamic include that supports a search form to filter the list of results displayed.
 Examples developed using this are: counter locations (e.g. Housing Service Centres, QGAP offices), [Events from CSV datasets](https://govdex.gov.au/confluence/display/SSQSWE/Events+from+CSV+datasets) (Seniors Week, Disability Action Week).
 Other datasets may be considered on request.
 
