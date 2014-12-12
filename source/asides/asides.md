@@ -1,9 +1,9 @@
 # Asides
 
-- [Contacts](#contacts)
+- [Contacts (asides)](#contacts)
 - [Emergency contact](#emergency-contact)
 - [Tip](#tip)
-- [Events](#events)
+- [Events (franchise landing page)](#events)
 - [Feedback](#feedback)
 - [Sponsors](#sponsors)
 - [Beta indicator](#beta-indicator) 

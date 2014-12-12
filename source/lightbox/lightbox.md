@@ -19,7 +19,6 @@ An accessible lightbox has been integrated with the template and can be invoked 
 
 ## Images
 Any link directly to an image will display the image in a lightbox and use the title attribute on the link as a caption for the displayed image.
-
 ### XHTML 1.0
 ```html
 <a href="/path/to/my/image.jpg"
@@ -30,7 +29,6 @@ title="If you can read this, you are probably looking at a lightbox caption">
 
 ## Image gallery
 An image gallery can be put together using the following markup. Each thumbnail image should be 100 x 100 pixels.
-
 ### XHTML 1.0
 ```html
 <div class="section image-gallery">
@@ -52,7 +50,6 @@ An image gallery can be put together using the following markup. Each thumbnail 
 
 ## Definition
 If a term or concept has been defined elsewhere on the page or on another page, you can display the definition block in a lightbox as follows:
-
 ### XHTML 1.0
 Either a block from the same page:
 ```html
@@ -76,7 +73,6 @@ The definition block should be marked up as:
 External maps can be displayed in an iframe lightbox using the following snippet.
 
 Please discuss with the Smart Service core team Product Manager before using this approach (for other map integration and accessibility considerations).
-
 ### XHTML 1.0
 ```html
 <a href="http://external-map-provider.com/the-map/" class="map">The map name or a thumbnail image</a>
