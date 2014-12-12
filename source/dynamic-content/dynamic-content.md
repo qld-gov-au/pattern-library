@@ -19,7 +19,7 @@ HTML CONTENT HERE
 
 ## Time-based content
 
-A php script is available for www.qld.gov.au hosted content to include content at certain times of the day.
+A php script is available for qld.gov.au hosted content to include content at certain times of the day.
 This script was developed to help with displaying content outside business hours.
 
 ### SSI
