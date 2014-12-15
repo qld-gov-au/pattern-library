@@ -4,7 +4,7 @@
   - [Warnings](#warnings)
   - [Information](#information)
   - [Success](#success)
-  - [Success (step)](#success-(step)) 
+  - [Success (step)](#success-step) 
 
 ## Status box
 ### Warnings
