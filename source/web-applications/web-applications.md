@@ -1,5 +1,11 @@
 # Web applications
 
+- [Status box](#status-box)
+  - [Warnings](#warnings)
+  - [Information](#information)
+  - [Success](#success)
+  - [Success (step)](#success-(step)) 
+
 ## Status box
 ### Warnings
 ### XHTML 1.0
