@@ -9,7 +9,7 @@
 - [Video](#video)
 - [Contacts](#contacts)
 - [Checklist](#checklist)
-- [Side-by-side comparison](side-by-side-comparison)
+- [Side-by-side comparison](#side-by-side-comparison)
 - [Side-by-side comparison (advantages and disadvantages)](#side-by-side-comparison-advantages-and-disadvantages)
 - [Cross-selling links](#cross-selling-links)
 
@@ -28,7 +28,7 @@ Within content, patterns may be used to add semantics that can be enhanced in th
 </div>
 ```
 ### Screenshot
-[Figures](images/figures.png)
+![Figures](images/figures.png)
 Notes:
 
 - replace class *.cut-in* with *.cut-in-alt* for alternating display. As at 13 October 2011, .cut-in are floated right and .cut-in-alt are floated left.
@@ -63,7 +63,7 @@ Use this pattern to include a Data Table within a content page. The template (an
 </table>
 ```
 #### Screenshot
-[Data table 1](images/datatables-1.jpg)
+![Data table 1](images/datatables-1.jpg)
 
 ### Example 2
 #### XHTML 1.0
@@ -273,7 +273,7 @@ Use this pattern to include a Data Table within a content page. The template (an
 </table>
 ```
 #### Screenshot
-[Data table 2](images/datatables-2.jpg)
+![Data table 2](images/datatables-2.jpg)
 
 ### Example 3
 #### XHTML 1.0
@@ -431,7 +431,7 @@ Use this pattern to include a Data Table within a content page. The template (an
 </table>
 ```
 #### Screenshot
-[Data table 3](images/datatables-3.jpg)
+![Data table 3](images/datatables-3.jpg)
 
 Technical requirements:
 - The table must be laid out in a well-formed manner.
@@ -446,7 +446,7 @@ Best practice and usage:
 - Odd and even row colours are applied, and the current column used for sorting has a colour applied to aide usability. These cannot be adjusted unless specifically requested.
 
 Notes:
-- You can find useful information about how set up data tables from the usage section: https://datatables.net/usage(https://datatables.net/usage)
+- You can find useful information about how set up data tables from the usage section: https://datatables.net/usage
 
 ## Downloadable document link
 
@@ -487,11 +487,12 @@ When linking to multiple formats, use a list:
 </ul>
 ```
 ### Screenshot
-[Download multiple format links](images/download-links.png)
+![Download multiple format links](images/download-links.png)
 
 ## Meta links
 The following approach allows the 'title' to be underlined without the 'meta' being underlined in all browsers, same as downloadable documents above.
 This can be used in more generic cases which are not downloadable documents.
+
 Note: it is important to leave whitespace (a line break) between *span.title* and *span.meta*.
 ### XHTML 1.0
 ```html
@@ -501,7 +502,7 @@ Note: it is important to leave whitespace (a line break) between *span.title* an
 </a>
 ```
 ### Screenshot
-[Meta links](images/meta-link.png)
+![Meta links](images/meta-link.png)
 
 ## Pull-quote
 ### XHTML 1.0
@@ -511,7 +512,7 @@ Note: it is important to leave whitespace (a line break) between *span.title* an
 </p></blockquote>
 ```
 ### Screenshot
-[Pull-quote](images/pull-quote.png)
+![Pull-quote](images/pull-quote.png)
 
 ## Pull-quote with citation
 ### XHTML 1.0
@@ -524,7 +525,9 @@ Note: it is important to leave whitespace (a line break) between *span.title* an
 </div>
 ```
 ### Screenshot
-[Pull-quote with citation](images/pull-quote-cite.png)
+![Pull-quote with citation](images/pull-quote-cite.png)
+
+Based on [HTML5 blockquote example](https://html.spec.whatwg.org/multipage/semantics.html#the-blockquote-element)
 
 ## Video
 See [Video pattern](https://govdex.gov.au/confluence/display/SSQSWE/Video+pattern)
@@ -584,7 +587,7 @@ Use [hCard](http://microformats.org/wiki/hcard)
 </div>
 ```
 ### Screenshot
-[Contacts](images/contacts.png)
+![Contacts](images/contacts.png)
 
 ## Checklist
 ### XHTML 1.0
@@ -599,10 +602,10 @@ Use [hCard](http://microformats.org/wiki/hcard)
 </ul>
 ```
 ### Screenshot
-[Checklist](checklist.png)
+![Checklist](checklist.png)
 
 ### Print styles
-[Checklist print style](checklist-print.png)
+![Checklist print style](checklist-print.png)
 
 ## Side-by-side comparison
 ### XHTML 1.0
@@ -624,7 +627,7 @@ Use [hCard](http://microformats.org/wiki/hcard)
 </div></div>
 ```
 ### Screenshot
-[Side-by-side comparison](iamges/comparison.png)
+![Side-by-side comparison](iamges/comparison.png)
 
 ## Side-by-side comparison (advantages and disadvantages)
 ### XHTML 1.0
@@ -646,7 +649,7 @@ Use [hCard](http://microformats.org/wiki/hcard)
 </div></div>
 ```
 ### Screenshot
-[Side-by-side comparison (advantages and disadvantages)](images/comparison-advantages.png)
+![Side-by-side comparison (advantages and disadvantages)](images/comparison-advantages.png)
 
 ## Cross-selling links
 ### XHTML 1.0
@@ -661,4 +664,4 @@ Use [hCard](http://microformats.org/wiki/hcard)
 </div></div>
 ```
 ### Screenshot
-[Cross-selling link](images/cross-selling.png)
+![Cross-selling link](images/cross-selling.png)
