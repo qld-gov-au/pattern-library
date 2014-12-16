@@ -31,12 +31,12 @@ Within content, patterns may be used to add semantics that can be enhanced in th
 ![Figures](images/figures.png)
 
 Notes:
-- replace class *.cut-in* with *.cut-in-alt* for alternating display. As at 13 October 2011, .cut-in are floated right and .cut-in-alt are floated left.
-- use *.figure* for a figure that is not a cut in (not floated)
--use *.diagram* for diagrams to remove the styling (borders, drop shadow) reserved for photos and feature images. Combine with *.figure* for standard images and *.cut-in* for floated images.
+- replace class `.cut-in` with `.cut-in-alt` for alternating display. As at 13 October 2011, `.cut-in` are floated right and `.cut-in-alt` are floated left.
+- use `.figure` for a figure that is not a cut in (not floated)
+-use `.diagram` for diagrams to remove the styling (borders, drop shadow) reserved for photos and feature images. Combine with `.figure` for standard images and `.cut-in` for floated images.
 
 ## Data tables (sortable tables)
-Use this pattern to include a Data Table within a content page. The template (and associated scripts) will read the information from this markup pattern and create the Data Table.
+Use this pattern to include a data table within a content page. The template (and associated scripts) will read the information from this markup pattern and create the data table.
 ### Example 1
 #### XHTML 1.0
 ```html
@@ -435,9 +435,9 @@ Use this pattern to include a Data Table within a content page. The template (an
 
 Technical requirements:
 - The table must be laid out in a well-formed manner.
-- The *thead* and *tbody* sections must be declared.
-- The *tfoot* section is optional and will not be used to sort data.
-- The table must be assigned a class name value of *data-table*
+- The `thead` and `tbody` sections must be declared.
+- The `tfoot` section is optional and will not be used to sort data.
+- The table must be assigned a class name value of `data-table`.
 
 Best practice and usage:
 - Data tables are best used for tables where sorting is required or for tables with a row count exceeding twelve or more.
@@ -451,9 +451,9 @@ Notes:
 ## Downloadable document link
 
 The following approach allows the 'title' to be underlined without the 'meta' being underlined in all browsers.
-**Use** *cite* **instead** of *span* **when the title is a citation of a publication name.**
+**Use** `cite` **instead** of `span` **when the title is a citation of a publication name.**
 
-Note: it is important to leave whitespace (a line break) between *span.title* and *span.meta*.
+Note: it is important to leave whitespace (a line break) between `span.title` and `span.meta`.
 
 ### XHTML 1.0-span
 ```html
@@ -495,7 +495,7 @@ When linking to multiple formats, use a list:
 The following approach allows the 'title' to be underlined without the 'meta' being underlined in all browsers, same as downloadable documents above.
 This can be used in more generic cases which are not downloadable documents.
 
-Note: it is important to leave whitespace (a line break) between *span.title* and *span.meta*.
+Note: it is important to leave whitespace (a line break) between `span.title` and `span.meta`.
 ### XHTML 1.0
 ```html
 <a href=".." class="meta-link">
