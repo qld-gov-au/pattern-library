@@ -98,7 +98,7 @@ If a counter is open all day, simply put the opening time in the `am` column for
 
 If a counter closes during a lunch period, specify a range in the `am` and `pm` columns. Example: `8:30-12:00`, `13:00-17:00`
 
-If a counter is open in the morning and closed for the afternoon, put a range in the `am` column and leave the `pm` column blank. Example: `8:30-12:00`
+If a counter is open in the morning and closed for the afternoon, put a range in the `am` column and leave the `pm` column blank. Example: `8:30-12:00`,
 
 Specify the normal operating hours for the counter. It is assumed counters will be closed on Queensland and local public holidays. This will be managed by the Public holidays API.
 
