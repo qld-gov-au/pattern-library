@@ -130,5 +130,5 @@ Create the upcoming events aside for Education and training franchise landing pa
   <!--#include virtual="/assets/includes/dynamic/events/upcoming.php?dataset=education-events" -->
 </div>
 ```
-### Screenshot
+### Example screenshot
 ![View example screenshot](images/screenshot-events.png)
