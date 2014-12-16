@@ -35,11 +35,11 @@ In the above example, /housing/assets/includes/after-hours-maintenance.html is t
 
 Parameter name | Description | Example
 -------------- | ----------- | -------
-virtual | Path to your include file | /housing/assets/includes/after-hours-maintenance.html
-weekends | Always include content on weekends? |  true &#124; false
-publicHolidays | Always include content on public holidays? | true &#124; false
-before | include content before this time, HHmm format | 0730 (7.30am) 
-after | include content on or after this time, HHmm format | 1700 (5.00pm) 
+`virtual` | Path to your include file | `/housing/assets/includes/after-hours-maintenance.html`
+`weekends` | Always include content on weekends? |  `true | false`
+`publicHolidays` | Always include content on public holidays? | `true | false`
+`before` | include content before this time, `HHmm` format | `0730` (7.30am) 
+`after` | include content on or after this time, `HHmm` format | `1700` (5.00pm) 
 
 ## Datasets
 On qld.gov.au we can handle simple datasets in CSV format and create a dynamic include that supports a search form to filter the list of results displayed.

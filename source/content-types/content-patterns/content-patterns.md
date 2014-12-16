@@ -451,6 +451,7 @@ Notes:
 ## Downloadable document link
 
 The following approach allows the 'title' to be underlined without the 'meta' being underlined in all browsers.
+
 **Use** `cite` **instead** of `span` **when the title is a citation of a publication name.**
 
 Note: it is important to leave whitespace (a line break) between `span.title` and `span.meta`.
