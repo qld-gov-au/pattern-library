@@ -29,8 +29,8 @@ Within content, patterns may be used to add semantics that can be enhanced in th
 ```
 ### Screenshot
 ![Figures](images/figures.png)
-Notes:
 
+Notes:
 - replace class *.cut-in* with *.cut-in-alt* for alternating display. As at 13 October 2011, .cut-in are floated right and .cut-in-alt are floated left.
 - use *.figure* for a figure that is not a cut in (not floated)
 -use *.diagram* for diagrams to remove the styling (borders, drop shadow) reserved for photos and feature images. Combine with *.figure* for standard images and *.cut-in* for floated images.
@@ -452,6 +452,7 @@ Notes:
 
 The following approach allows the 'title' to be underlined without the 'meta' being underlined in all browsers.
 **Use** *cite* **instead** of *span* **when the title is a citation of a publication name.**
+
 Note: it is important to leave whitespace (a line break) between *span.title* and *span.meta*.
 
 ### XHTML 1.0-span
@@ -462,7 +463,7 @@ Note: it is important to leave whitespace (a line break) between *span.title* an
 </a>
 ```
 ### Screenshot
-[Download link](images/download-link.png)
+![Download link](images/download-link.png)
 ### XHTML 1.0-cite
 ```html
 <a href=".." class="download">
@@ -471,7 +472,8 @@ Note: it is important to leave whitespace (a line break) between *span.title* an
 </a>
 ```
 ### Screenshot
-[Download cite link](images/download-link-cite.png)
+![Download cite link](images/download-link-cite.png)
+
 When linking to multiple formats, use a list:
 ### XHTML 1.0
 ```html
@@ -602,10 +604,10 @@ Use [hCard](http://microformats.org/wiki/hcard)
 </ul>
 ```
 ### Screenshot
-![Checklist](checklist.png)
+![Checklist](images/checklist.png)
 
 ### Print styles
-![Checklist print style](checklist-print.png)
+![Checklist print style](images/checklist-print.png)
 
 ## Side-by-side comparison
 ### XHTML 1.0
@@ -627,7 +629,7 @@ Use [hCard](http://microformats.org/wiki/hcard)
 </div></div>
 ```
 ### Screenshot
-![Side-by-side comparison](iamges/comparison.png)
+![Side-by-side comparison](images/comparison.png)
 
 ## Side-by-side comparison (advantages and disadvantages)
 ### XHTML 1.0
