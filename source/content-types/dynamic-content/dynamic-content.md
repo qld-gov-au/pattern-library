@@ -27,7 +27,7 @@ This script was developed to help with displaying content outside business hours
 ```
 
 Place your content in an include file, like you normally would, then link to time.php with the location of your include and the parameters to indicate when it should be rendered.
-In the above example, /housing/assets/includes/after-hours-maintenance.html is to be rendered:
+In the above example, */housing/assets/includes/after-hours-maintenance.html* is to be rendered:
 
 * on weekends (from 12.00am Saturday through to 12.00am Monday)
 * on Queensland public holidays (to be implemented)

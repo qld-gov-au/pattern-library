@@ -10,8 +10,8 @@ Icon should be 124px square.
 	* [Google Play Brand Guidelines](http://developer.android.com/distribute/googleplay/promote/brand.html)
 
 1. escape '&' as '&' in the iTunes link
-2. remove the *target* attribute from the iTunes link
-3. you can safely remove *style* setting *border: 0* from the iTunes link. Borders are removed by the qgov stylesheets.
+2. remove the `target` attribute from the iTunes link
+3. you can safely remove `style` setting `border: 0` from the iTunes link. Borders are removed by the qgov stylesheets.
 4. append ' for iPhone/iPad' to the alt text for iTunes links: "ReadyQld by Volunteering Queensland Inc for iPhone/iPad"
 5. prepend app name to android market link alt text: "ReadyQld---Available in Google Play"
 
