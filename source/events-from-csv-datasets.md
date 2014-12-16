@@ -7,6 +7,7 @@ Events are presented as search results, as specified in the CUE: [Search results
 A simplified version is available for the #CSV format for upcoming events on franchise landing pages.
 
 The dataset for events is to be a CSV file published and maintained by a franchise.
+
 The file should be stored in your `assets/data` folder and named for the event, example: `/seniors/assets/data/seniors-week-events.csv`
 - [Page model](#page-model)
 - [Configuration](#configuration)
@@ -130,4 +131,4 @@ Create the upcoming events aside for Education and training franchise landing pa
 </div>
 ```
 
-![View example screenshot)(images/screenshot-events.png)
+![View example screenshot](images/screenshot-events.png)
