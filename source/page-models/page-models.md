@@ -7,4 +7,4 @@ Refer to the [Queensland Government online product definition](https://govdex.go
 - Franchise landing pages
 - Theme index pages (also used for 'sub-themes')
 - Content pages
-	- [News pages](content-types/news-pages/news-pages.md)
+	- [News pages](#content-types/news-pages/news-pages.md)
