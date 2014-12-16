@@ -59,11 +59,16 @@ The process menu will be duplicated as a drop-down menu at the top of each servi
 
 
 - use *class="future"* for items the user cannot visit yet
-- remove *@href* from items the user cannot visit yet, but keep the \<a>\ tag
+- remove *@href* from items the user cannot visit yet, but keep the 
+```html
+<a>
+``` tag
 
 ## Pagination
 
-Place this immediately after the table of contents (shown above) at the end of the article, as marked by these closing tags: \</div></div></div><!-- end .article, .box-sizing, .border -->\
+Place this immediately after the table of contents (shown above) at the end of the article, as marked by these closing tags: ```html
+</div></div></div><!-- end .article, .box-sizing, .border -->
+```
 ### XHTML 1.0
 ```html
 <ul class="pagination">
