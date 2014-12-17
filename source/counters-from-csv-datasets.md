@@ -54,6 +54,7 @@ If a search form is provided, the parameters will be passed as a query string.
 
 ### CSV format
 The CSV file must contain the following columns.
+
 The first row must contain these exact column headings.
 
 Column | Description | Format | Required
@@ -135,6 +136,7 @@ Contact the QGov Online team to add your dataset.
 
 #### Sort order
 The sort order of the CSV file is preserved.
+
 If a location is specified, search results will be sorted by proximity (counters nearest the search location will appear first). All counters will be included unless a `distance` filter is supplied.
 
 #### Pagination
@@ -154,6 +156,7 @@ Show all QGAP locations near Townsville
 <!--#include virtual="/assets/includes/dynamic/counters/list.php?${QUERY_STRING}&dataset=QGAP&location=Townsville" -->
 ```
 Show **all** court houses
+
 (Query string parameters are required to support pagination)
 ```html
 <!--#include virtual="/assets/includes/dynamic/counters/list.php?${QUERY_STRING}&dataset=courthouses" -->
