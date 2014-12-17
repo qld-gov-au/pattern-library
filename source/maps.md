@@ -57,6 +57,7 @@ Test your page and publish!
 
 ## Add SEO fallbacks
 **Experimental feature**
+
 This feature is available on www.qld.gov.au but has not yet been tested with googlebot and other search engine crawlers. 
 
 ### Usage
@@ -114,17 +115,17 @@ Format | Example output | Description
 `{{Title}}` | Sample data | Displays the exact value from the CSV
 `{{Large number}}` | 7589215 | Displays the exact value.
 `{{shortnum:Large number}}` | 7.6 million | Rounds off to millions (one decimal place)
-`{{$:Large number|abbr}}` | <abbr title="$7,589,215">$7.6 million</abbr> | Uses HTML abbreviation
+`{{$:Large number|abbr}}` | `<abbr title="$7,589,215">$7.6 million</abbr>` | Uses HTML abbreviation
 `{{$:Large number|abbr:both}}` | $7.6 million ($7,589,215) | Display abbreviated and exact number
 `{{date:Date}}` | 4 January 2011 | Date formatting
 `{{datetime:Date and time}}` | 4 January 2011, 3.07pm | Date and time formatting
 `{{time:Time}}` | 9.40am | Time formatting
-`{{tex:Lorem|words:5}}` | Lorem ipsum dolor sit amet,… | Display only n words. (Useful for search result descriptions.)
-`{{md:Markdown}}` | Text with <em>emphasis</em> | Treats the data as markdown and generates HTML
+`{{tex:Lorem|words:5}}` | Lorem ipsum dolor sit amet,… | Display only *n* words. (Useful for search result descriptions.)
+`{{md:Markdown}}` | Text with `<em>emphasis</em>` | Treats the data as markdown and generates HTML
 `{{Markdown}}` | Text with \*emphasis\* | The exact value (includes the markdown syntax)
 `{{text:Markdown}}` | Text with emphasis | Strips markdown formatting
 `{{compare:columnA|columnB}}` | - | Uses the advantages/disadvantages pattern. Both columns are processed as markdown.
-`{{list:List}}` | <ul><li>one</li><li>two</li><li>three</li></ul> | Treats the data as a list separated by semicolons and generates bullet points.
+`{{list:List}}` | `<ul><li>one</li><li>two</li><li>three</li></ul>` | Treats the data as a list separated by semicolons and generates bullet points.
 `{{list:Title}}` | Sample data | No list generated when data does not contain any semicolons.
 `{{info:Lorem}}` | - | Uses the info status pattern with the lorem data as the contents and a default heading of 'Information'
 `{{info:Lorem|Title}}` | - | Uses the info status pattern with the lorem data as the contents and the heading found from the title column: 'Sample data'
@@ -210,11 +211,12 @@ You can filter the results displayed on the map using any columns from your data
 
 ### Add an image gallery to the page
 Image galleries are supported, with some limitations.
+
 You must:
 - publish the images in a known location
 - use the same number of images on each page
 - have 2 columns for every image in your CSV file:
-  	1. image URL (e.g. Image1_src, Image2_src). We recommend using a full protocol-relative URL so third-party developers can use the data. e.g. //www.qld.gov.au/franchise/assets/images/filename.jpg
+  	1. image URL (e.g. Image1_src, Image2_src). We recommend using a full protocol-relative URL so third-party developers can use the data. e.g. `//www.qld.gov.au/franchise/assets/images/filename.jpg`
     2. alt text (e.g. Image1_description, Image2_description, …)
 - add a script snippet to the view template to initialise the image gallery
 
