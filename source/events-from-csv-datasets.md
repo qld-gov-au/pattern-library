@@ -90,7 +90,7 @@ A date range is always used in the search results. By default, all events that o
 
 Parameter | Description | Format | Default value
 --------- | ----------- | ------ | -------------
-dataset | Identifies which CSV source file to use. You must contact the QGov Online team to configure new datasets. | Text [see supported datasets](#supported-datasets) below) | - 
+dataset | Identifies which CSV source file to use. You must contact the QGov Online team to configure new datasets. | Text (see [supported datasets](#supported-datasets) below) | - 
 date | Start date | dd/MM/YYYY | Defaults to the current date (past events are excluded) 
 until | End date | dd/MM/YYYY | No default (all future events are shown)
 location | An address of a location. If specified, only events falling within a 50km radius will be included. | A string which can be geocoded by google | - 

@@ -125,7 +125,7 @@ A date range is always used in the search results. By default, all events that o
 
 Parameter | Description | Format | Default value
 --------- | ----------- | ------ | -------------
-dataset | Identifies which CSV source file to use. You must contact the QGov Online team to configure new datasets. | Text [see supported datasets](#supported-datasets) below) | -
+dataset | Identifies which CSV source file to use. You must contact the QGov Online team to configure new datasets. | Text (see [supported datasets](#supported-datasets) below) | -
 location | An address of a location. If specified, the nearest counters will be displayed. | A string which can be geocoded by google | -
 distance | Filter results based on distance from the specified `location` | Number (km) | - (no filtering based on distance) 
 
