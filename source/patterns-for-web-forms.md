@@ -486,15 +486,142 @@ Client-side validation is built into the SWE template. Fields are validated on `
 
 ### Validation techniques
 - use the `@required` attribute on all required fields
-- use `type="email"` for email fields (note that `multiple` is not supported)
-- use `.setCustomValidity( message )` for other validation.
+- use [`type="email"`](http://www.w3.org/TR/html5-author/states-of-the-type-attribute.html#e-mail-state) for email fields (note that `multiple` is not supported)
+- use [`.setCustomValidity( message )`](http://www.w3.org/TR/html5-author/association-of-controls-and-forms.html#dom-cva-setcustomvalidity) for other validation.
 - be sure to run custom validation on the best events:
 	- on `click` for radio buttons and checkboxes
     - on `change` or `blur` for text fields, select boxes and textareas.
 
+#### Example: email address must be a `.qld.gov.au` address
+##### Markup in form
+```html
+<li>
+  <label for="email">
+    <span class="label">Email</span>
+    <abbr title="(required)">*</abbr>
+  </label>
+  <input type="email" id="customer-email" name="emailField" required="required" size="40" />
+</li>
+```
+- required fields is provided—use `required="required"`
+- email validation is provided—use `type="email"`
+- pattern validation is not yet supported (see [notes](#html5-constraint-validation-api-notes) below)
+- use custom script to verify email matches pattern
+- place the custom script after the global footer, or use jQuery's ready event
 
-    	#### Example: email address must be a .qld.gov.au address
-        #### Required checkboxes
-    ### HTML5 input type notes
-    ### HTML5 constraint validation API notes
+##### custom validation
+```html
+$( '#email' ).bind( 'change', function() {
+ 
+    var emailPattern = /\.qld\.gov\.au$/,
+        emailField = $( '#email' ),
+        value = emailField.val()
+    ;
+ 
+    // if there is no value
+    if ( value === '' ) {
+        // clear the custom error
+        emailField[ 0 ].setCustomValidity( '' );
+        // required field validation will kick in
+ 
+    // test if value matches pattern
+    } else if ( emailPattern.test( value )) {
+        // valid
+        emailField[ 0 ].setCustomValidity( '' );
+ 
+    } else {
+        // invalid
+        emailField[ 0 ].setCustomValidity( 'Must be a .qld.gov.au email address' );
+    }
+ 
+});
+```
+
+#### Required checkboxes
+In HTML5, specifying `@required` on any single checkbox requires the user to tick that box. This is useful for agreeing to terms and conditions. But if you have a group of possible answers and only need the user to select one (or more), it will not work—*using* `@required` *will force customers to tick every box*. Think that's strange? It doesn't make sense to many web authors, but it is specified in html5 and browsers have implemented it, so that's how it is. Read more on stackoverflow: [Using the HTML5 “required” attribute for a group of checkboxes?](http://stackoverflow.com/questions/6218494/using-the-html5-required-attribute-for-a-group-of-checkboxes)
+
+You need custom validation to 'require' *one or more checkboxes are selected* you must use custom validation. You can adapt the following code.
+
+Place this script in the footer of the page:
+##### minOneCheckboxCheckedCheck
+```html
+(function( $ ) {
+    'use strict';
+    var minOneCheckboxGroups = [ 'flavours' ],
+        seen = {},
+      
+    // check that at least one checkbox is checked
+    minOneCheckboxCheckedCheck = function() {
+        var checkboxes = $( this.form.elements[ this.name ] ),
+            validitionMessage = ''
+        ;
+        // must have 1 item selected
+        if ( checkboxes.filter( ':checked' ).length === 0 ) {
+            validitionMessage = 'Must be completed';
+        }
+        // set validity on every checkbox in the group (UI isn't updated otherwise)
+        checkboxes.each(function() {
+            this.setCustomValidity( validitionMessage );
+        });
+    };
+    // find checkboxes
+    minOneCheckboxGroups = $( 'input' ).filter(function() {
+        return $.inArray( this.name, minOneCheckboxGroups ) >= 0;
+    });
+    // initial validity for group
+    minOneCheckboxGroups.each(function() {
+        if ( ! seen[ this.name ] ) {
+            seen[ this.name ] = true;
+            minOneCheckboxCheckedCheck.apply( this );
+        }
+    })
+    // setup event handler
+    .on( 'change', minOneCheckboxCheckedCheck );
+}( jQuery ));
+```
+In your form, be sure to run this check when the form is submitted, like so:
+```html
+<form action="…" method="post" class="form" onsubmit="minOneCheckboxCheckedCheck();">
+```
+
+### HTML5 input type notes
+HTML5 introduces [new input types](http://www.w3.org/TR/html5-author/the-input-element.html#attr-input-type).
+The SWE template supports the following:
+type | Status | Notes
+---- | ------ | -----
+`search` | supported | treated as text in older browsers 
+`tel` | supported | treated as text in older browsers 
+`url` | NOT SUPPORTED | use `.setCustomValidity`
+`email` | partially supported | validation supported; does not support `@multiple`
+`datetime` | NOT SUPPORTED | - 
+`date` | NOT SUPPORTED | - 
+`month` | NOT SUPPORTED | - 
+`week` | NOT SUPPORTED | - 
+`time` | NOT SUPPORTED | - 
+`datetime-local` | NOT SUPPORTED | - 
+`number` | NOT SUPPORTED | - 
+`range` | NOT SUPPORTED | -
+`color` | NOT SUPPORTED | -  
+HTML4 input types are supported in all browsers
+`hidden, text, password, checkbox, radio, file, submit, image, reset, button`
+
+### HTML5 constraint validation API notes
+Validation is based off the [HTML5 constraint validation API](http://www.w3.org/TR/html5-author/association-of-controls-and-forms.html#constraints). The SWE template includes a polyfill for older browsers that do implement the API. The [polyfill](http://www.w3.org/TR/html5-author/association-of-controls-and-forms.html#constraints) supports the following:
+API | Status | Alternative tactics
+--- | ------ | -------------------
+[~~.willValidate~~](http://www.w3.org/TR/html5-author/association-of-controls-and-forms.html#dom-cva-willvalidate) | not supported | assume all fields will be validated 
+[.setCustomValidity( message )](http://www.w3.org/TR/html5-author/association-of-controls-and-forms.html#dom-cva-setcustomvalidity) | supported | - 
+[.validity.valueMissing](http://www.w3.org/TR/html5-author/association-of-controls-and-forms.html#dom-validitystate-valuemissing) | supported | - 
+[.validity.typeMismatch](http://www.w3.org/TR/html5-author/association-of-controls-and-forms.html#dom-validitystate-typemismatch) | support for `@type=email` only | use `.setCustomValidity for @type=url`
+[.validity.patternMismatch](http://www.w3.org/TR/html5-author/association-of-controls-and-forms.html#dom-validitystate-patternmismatch) | supported | - 
+[~~.validity.tooLong~~](http://www.w3.org/TR/html5-author/association-of-controls-and-forms.html#dom-validitystate-toolong) | not supported | use `@maxlength` for `input` and `.setCustomValidity` for `textarea`
+[~~.validity.rangeUnderflow~~](http://www.w3.org/TR/html5-author/association-of-controls-and-forms.html#dom-validitystate-rangeunderflow) | not supported | use `.setCustomValidity` 
+[~~.validity.rangeOverflow~~](http://www.w3.org/TR/html5-author/association-of-controls-and-forms.html#dom-validitystate-rangeoverflow) | not supported | use `.setCustomValidity`
+[~~.validity.stepMismatch~~](http://www.w3.org/TR/html5-author/association-of-controls-and-forms.html#dom-validitystate-stepmismatch) | not supported | use `.setCustomValidity`
+[.validity.customError](http://www.w3.org/TR/html5-author/association-of-controls-and-forms.html#dom-validitystate-customerror) | supported (set by `.setCustomValidity`) | - 
+[.validity.checkValidity()](http://www.w3.org/TR/html5-author/association-of-controls-and-forms.html#dom-cva-checkvalidatity) | supported | -
+[.validity.validationMessage](http://www.w3.org/TR/html5-author/association-of-controls-and-forms.html#dom-cva-validationmessage) | support (supported for `valueMissing`, `customError` and `typeMismatch` for `email`) | `.setCustomValidity` will set `.validationMessage` 
+
 ## References
+- [Module 4 Online Forms (Consistent User Experience standard)](http://www.qld.gov.au/web/cue/module4/)
+- [Learning to love forms (Aaron Gustafson, 2007)](http://www.webdirections.org/resources/aaron-gustafson/)
