@@ -27,7 +27,7 @@
     - [Hiding irrelevant questions](#hiding-irrelevant-questions)
 - [Client-side validation](#client-side-validation)
 	- [Validation techniques](#validation-techniques)
-    	- [Example: email address must be a .qld.gov.au address](#example-email-address-must-be-a-qld-gov-au-address)
+    	- [Example: email address must be a .qld.gov.au address](#example-email-address-must-be-a-qldgovau-address)
         - [Required checkboxes](#required-checkboxes)
     - [HTML5 input type notes](#html5-input-type-notes)
     - [HTML5 constraint validation API notes](#html5-constraint-validation-api-notes)
@@ -76,6 +76,7 @@ Individual questions can be grouped.
 
 ### Actions
 The last 'question' in a form is which action to be taken. There should be one (and only one) *primary action* per form. Primary actions should have a distinct style.
+
 Secondary actions may be presented as buttons or links. Actions should be presented as a list.
 #### XHTML
 ```html
@@ -107,7 +108,6 @@ Correct usage | Incorrect usage | Explanation
 ------------- | --------------- | -----------
 Email | What is your email address | Use a simple prompt where possible 
 Email | Email: | Do not include a colon on prompts 
-
 How many baby capsules do you need to hire? | How many baby capsules do you need to hire | Include a question mark on questions 
 
 #### Hints
@@ -130,6 +130,7 @@ Useful for:
 
 #### Help
 Questions should be designed so customers can easily answer them. We should not expect customers to read help, but it can be provided when useful.
+
 Help content must be published in either an [aside](https://github.com/qld-gov-au/pattern-library/blob/master/source/content-types/asides/asides.md) on the form itself, or in a separate page.
 
 You can link to help within a hint. The hint text should try to provide enough information if possible, with the help link providing supplemental and more detailed information. Links to help should use a class of `help`.
@@ -304,7 +305,7 @@ Customers may use autofill features in their browsers to fill out personal infor
 
 #### "Either or" questions
 Customers may have the option to answer 1 question or another. You can use progressive disclosure (present the options using radio buttons, and then display the relevant questions when the customer clicks the radio button) or use the 'xor' pattern. Progressive disclosure is the better choice if the fields are required.
-##### XHTML
+##### HTML
 ```html
 <ol type="A" class="xor">
     <li>
