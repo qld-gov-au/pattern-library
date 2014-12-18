@@ -1,12 +1,3 @@
-# News based on XML feeds
-
-The [product definition](https://govdex.gov.au/confluence/display/SSQSWE/Styles+and+standards) outlines page models for publishing News items to a franchise on www.qld.gov.au
-
-The preferred solution for publishing is to send an (Atom) XML feed. This approach means:
-- A single source of truth for news items in a standard format
-- News items can be easily syndicated elsewhere (like the www.qld.gov.au homepage)
-- Reduces redundant effort for franchise teams as the feed can be automatically used to populate the slideshow on the franchise landing page, the contents of the news archive page, and the section navigation menus on news item pages.
-
 # Patterns for web forms
 
 - [Structure of a form](#structure-of-a-form)
@@ -23,7 +14,7 @@ The preferred solution for publishing is to send an (Atom) XML feed. This approa
     - [Answers](#answers)
     	- [Short text answers](#short-text-answers)
         - [Selecting from a list of choices](#selecting-from-a-list-of-choices)
-        	- [Please select](#please-specify)
+        	- [Please select](#please-select)
             - [Other, please specify](#other-please-specify)
         - [Radio buttons and checkboxes](#radio-buttons-and-checkboxes)
         - [Groups](#groups)
@@ -32,14 +23,14 @@ The preferred solution for publishing is to send an (Atom) XML feed. This approa
         - ["Either or" questions](#either-or-questions)
     - [Accessible labels](#accessible-labels)
 - [Progressive disclosure](#progressive-disclosure)
-	- [Showing sections of a form one at a time (e.g. step-by-step wizard)](#showing-sections-of-a-form-one-at-a-time-e.g.-step-by-step-wizard)
+	- [Showing sections of a form one at a time (e.g. step-by-step wizard)](#showing-sections-of-a-form-one-at-a-time-eg-step-by-step-wizard)
     - [Hiding irrelevant questions](#hiding-irrelevant-questions)
 - [Client-side validation](#client-side-validation)
 	- [Validation techniques](#validation-techniques)
-    	- [Example: email address must be a .qld.gov.au address](#example-email-address-must-be-a-qld.gov.au-address)
+    	- [Example: email address must be a .qld.gov.au address](#example-email-address-must-be-a-qld-gov-au-address)
         - [Required checkboxes](#required-checkboxes)
     - [HTML5 input type notes](#html5-input-type-notes)
-    - [HTML5 constraint validation API notes](html5-constraint-validation-api-notes)
+    - [HTML5 constraint validation API notes](#html5-constraint-validation-api-notes)
 - [References](#references)
 
 ## Structure of a form
@@ -52,6 +43,7 @@ The status of a form is not usually shown when a customer first opens the page. 
 
 #### Validation messages
 Briefly describe the action the customer should take to correct each error before they submit the form again. Use positive language (focus on the solution, not the problem).
+
 Validation constraint | Suggested message | Notes
 --------------------- | ----------------- | -----
 Required field is blank | Must be completed | - 
@@ -68,6 +60,7 @@ The instructions at the beginning of the form are the *preamble*.
 
 ### List of questions
 A form is a list of questions. Use an ordered list.
+
 A "question" may include one or more form controls. If multiple controls are included, use a fieldset.
 ```html
 <ol class="questions">
@@ -78,6 +71,7 @@ A "question" may include one or more form controls. If multiple controls are inc
 </ol>
 ```
 Forms may be divided into multiple sections.
+
 Individual questions can be grouped.
 
 ### Actions
@@ -95,6 +89,7 @@ Secondary actions may be presented as buttons or links. Actions should be presen
 
 #### Screenshot
 ![Actions](images/screenshot-actions.png)
+
 Notes:
 - buttons can be: `input[type="submit"], button` or `a.button`
 - to style a link as a button, use `class="button"`
@@ -107,10 +102,12 @@ By ‘question’ we mean the question (prompt) and answer. We (the authors of t
 ### Question prompts
 Use a `label` or `legend` for the question. Questions do not need to literally phrased as questions, often a simple prompt is fine (e.g. "Email").
 Do not include a colon at the end of a prompt. Do include a question mark '?' if your prompt is phrased as a question.
+
 Correct usage | Incorrect usage | Explanation
 ------------- | --------------- | -----------
 Email | What is your email address | Use a simple prompt where possible 
 Email | Email: | Do not include a colon on prompts 
+
 How many baby capsules do you need to hire? | How many baby capsules do you need to hire | Include a question mark on questions 
 
 #### Hints
@@ -124,6 +121,7 @@ Hints are optional. Use hint text to provide inline help and instructions that h
 ```
 ##### Screenshot
 ![label—car, make and model](images/screenshot-label-car-model.png)
+
 Useful for:
 - displaying required data formats (we recommended you use an example). If you support multiple data formats, display the most common one—**do not** describe them all.
 - displaying example data.
@@ -168,12 +166,15 @@ Answers may be free text, selecting from a list of choices, or broken down into 
 
 #### Selecting from a list of choices
 You can use radio buttons, drop-down lists and checkboxes to let customers select values from a controlled list.
+
 If the customer can select more than one item, use checkboxes.
+
 Question | Recommended | Explanation
 -------- | ----------- | -----------
 Country | drop-down list | The list of countries is very long, and the customer does not need to see all the options to understand the question 
 Satisfaction scale | radio buttons | Seeing all the options helps answer the question; there should not be too many options 
 Closed questions (yes or no answer) | radio buttons | Only 2 options, make them both visible 
+
 If the customer can only select one of the answers provided, radio buttons and drop-down lists both work. If there are lots of options (more than 7), a drop-down list is neater. However, if the question is easier to understand when you review the available options, using radio buttons makes them visible and this is easier to use.
 
 ##### Please select
@@ -184,6 +185,7 @@ The first option in the list may be a prompt to make a selection. It should be l
 
 ##### Other, please specify
 We have not documented a pattern for this yet.
+
 1. Other option, show a text field labelled "Please specify"
 2. Combo-box, `input` linked to HTML5 `datalist` for suggestions as you type (HTML5 browsers only, polyfill TBD)
 
@@ -218,11 +220,13 @@ Radio buttons and checkboxes require different markup for accessibility. This is
 
 #### Groups
 Sometimes you will want to collect the answer in multiple fields—for example, an address broken down by street lines 1–3, suburb, state and postcode. You must group these questions using a `fieldset` and provide a label for the entire group using `legend`.
+
 Class | Purpose
 ----- | -------
 `.group` | A group of questions. 
 `.compact` | Use a compact (single line) layout for the group (commonly used for 'locality'—suburb, state and postcode). Does not require a fieldset and legend. 
 `.atomic` | Treat the group as a single question when displaying validation warnings. Must have an wrapping fieldset and legend. 
+
 Groups may be nested.
 ##### XHTML
 ```html
@@ -368,6 +372,7 @@ Customers may have the option to answer 1 question or another. You can use progr
 
 ### Accessible labels
 Labels are the tried and true way to associate information with form fields, so that it will be announced by screen readers.
+
 The following code overloads the label to include:
 - labels
 - required field indication
@@ -385,8 +390,11 @@ The following code overloads the label to include:
 ```
 #### Screenshot
 ![Accessible label](images/accessible-label.png)
+
 Replace `label` with `legend` for fieldsets.
+
 Only include `em.alert` in server-side validation. Client-side validation will manage `em.alert` for you.
+
 Accessibility notes:
 - `.label` is a possible candidate for `aria-labelledby` (requires an `@id`) [Accessible Form Labeling & Instructions](http://www.karlgroves.com/2011/10/10/accessible-form-labeling-instructions/)
 - `.hint` is a possible candidate for `aria-describedby` (requires an `@id`)
@@ -401,6 +409,7 @@ Server side implementation is recommended
 
 ### Hiding irrelevant questions
 The SWE template includes a script to toggle relevance on any element.
+
 Relevance can be applied to individual questions or entire sections of forms.
 
 Important notes on irrelevant questions:
@@ -414,7 +423,7 @@ Relevance must be checked:
 - when the form is loaded (browsers may keep radio buttons checked when a form is refreshed).
 
 Relevance can be implemented with custom scripting or text based instructions.
-Place the custom script after the page footer, or use jQuery's ready event.v
+Place the custom script after the page footer, or use jQuery's ready event.
 #### XHTML
 ##### Example: markup
 ```html
@@ -586,7 +595,9 @@ In your form, be sure to run this check when the form is submitted, like so:
 
 ### HTML5 input type notes
 HTML5 introduces [new input types](http://www.w3.org/TR/html5-author/the-input-element.html#attr-input-type).
+
 The SWE template supports the following:
+
 type | Status | Notes
 ---- | ------ | -----
 `search` | supported | treated as text in older browsers 
@@ -602,11 +613,14 @@ type | Status | Notes
 `number` | NOT SUPPORTED | - 
 `range` | NOT SUPPORTED | -
 `color` | NOT SUPPORTED | -  
+
 HTML4 input types are supported in all browsers
+
 `hidden, text, password, checkbox, radio, file, submit, image, reset, button`
 
 ### HTML5 constraint validation API notes
-Validation is based off the [HTML5 constraint validation API](http://www.w3.org/TR/html5-author/association-of-controls-and-forms.html#constraints). The SWE template includes a polyfill for older browsers that do implement the API. The [polyfill](http://www.w3.org/TR/html5-author/association-of-controls-and-forms.html#constraints) supports the following:
+Validation is based off the [HTML5 constraint validation API](http://www.w3.org/TR/html5-author/association-of-controls-and-forms.html#constraints). The SWE template includes a polyfill for older browsers that do implement the API. The [polyfill](http://remysharp.com/2010/10/08/what-is-a-polyfill/) supports the following:
+
 API | Status | Alternative tactics
 --- | ------ | -------------------
 [~~.willValidate~~](http://www.w3.org/TR/html5-author/association-of-controls-and-forms.html#dom-cva-willvalidate) | not supported | assume all fields will be validated 
