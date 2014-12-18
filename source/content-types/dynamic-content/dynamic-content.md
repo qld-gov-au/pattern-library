@@ -43,7 +43,7 @@ Parameter name | Description | Example
 
 ## Datasets
 On qld.gov.au we can handle simple datasets in CSV format and create a dynamic include that supports a search form to filter the list of results displayed.
-Examples developed using this are: counter locations (e.g. Housing Service Centres, QGAP offices), [Events from CSV datasets](https://govdex.gov.au/confluence/display/SSQSWE/Events+from+CSV+datasets) (Seniors Week, Disability Action Week).
+Examples developed using this are: counter locations (e.g. Housing Service Centres, QGAP offices), [Events from CSV datasets](https://github.com/qld-gov-au/pattern-library/blob/master/source/events-from-csv-datasets.md) (Seniors Week, Disability Action Week).
 Other datasets may be considered on request.
 
 * [Sample events (CSV, 23KB)](attachments/seniors-week-events.csv)

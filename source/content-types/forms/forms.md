@@ -1,3 +1,3 @@
 # Forms
 
-See [Patterns for web forms](https://govdex.gov.au/confluence/display/SSQSWE/Patterns+for+web+forms).
+See [Patterns for web forms](https://github.com/qld-gov-au/pattern-library/blob/master/source/patterns-for-web-forms.md).
