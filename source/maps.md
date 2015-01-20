@@ -56,11 +56,7 @@ Edit the info panel template to display detailed information for each row of dat
 Test your page and publish!
 
 ## Add SEO fallbacks
-**Experimental feature**
 
-This feature is available on www.qld.gov.au but has not yet been tested with googlebot and other search engine crawlers. 
-
-### Usage
 Above the data set link, insert this line of code. There are a number of default settings that can be over-ridden by using key value pairs in the query string.
 These are:
 - resource (the open data resource ID)
