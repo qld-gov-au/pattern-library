@@ -1,6 +1,6 @@
 # Counters from CSV datasets
 
-New [map patterns](https://govdex.gov.au/confluence/display/SSQSWE/Maps) are now available.
+*New [map patterns](https://govdex.gov.au/confluence/display/SSQSWE/Maps) are now available.*
 
 Pages hosted on www.qld.gov.au may include a dynamic, searchable list of counters.
 Counters are presented as search results, as specified in the CUE: [Search results presentation](http://www.qld.gov.au/web/cue/module5/)
