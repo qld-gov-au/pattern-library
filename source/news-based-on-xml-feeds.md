@@ -50,7 +50,7 @@ A page that lists all the news items in the feed, featuring the ‘high’ prior
 
 Use the following in the content area of a content page (e.g. /recreation/news/index.html ):
 ```html
-<!--#include virtual = "/assets/includes/dynamic/news/all-news.php?franchise=franchiseslug"-->
+<!--#include virtual="/assets/includes/dynamic/news/all-news.php?franchise=franchiseslug"-->
 ```
 
 ### News item page section navigation
@@ -58,7 +58,7 @@ A HTML fragment file containing section navigation menu that should be used on a
 
 Use the following as the section nav include on each ‘news item’ page:
 ```html
-<!--#include virtual = "/assets/includes/dynamic/news/all-news-nav.php?franchise=franchiseslug"-->
+<!--#include virtual="/assets/includes/dynamic/news/all-news-nav.php?franchise=franchiseslug"-->
 ```
 
 ### Previewing dynamic content
