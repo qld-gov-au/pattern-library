@@ -4,7 +4,7 @@ Pages hosted on www.qld.gov.au may include events.
 
 Events are presented as search results, as specified in the CUE: [Search results presentation](http://www.qld.gov.au/web/cue/module5/)
 
-A simplified version is available for the #CSV format for upcoming events on franchise landing pages.
+A simplified version is available for the [CSV format for upcoming events](#csv-format-for-upcoming-events) on franchise landing pages.
 
 The dataset for events is to be a CSV file published and maintained by a franchise.
 
