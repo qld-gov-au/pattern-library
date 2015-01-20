@@ -64,4 +64,4 @@ Use the following as the section nav include on each ‘news item’ page:
 ### Previewing dynamic content
 Pages that use these dynamic elements cannot be previewed normally from within an agency CMS (i.e. the elements that are dynamic will not render correctly in your CMS).
 
-During initial integration, talk to the SSQ core team about establishing a time-limited preview of these pages on the SSQ infrastructure before they go-live.
+During initial integration, talk to us about establishing a time-limited preview of these pages on www.qld.gov.au before they go-live.
