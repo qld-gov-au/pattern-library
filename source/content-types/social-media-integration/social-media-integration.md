@@ -34,4 +34,7 @@ Please contact the QGov Online core team to have each new feed configured. The f
 Notes:
 * Populate **ACCOUNT** (e.g. QLDSES), **ACCOUNT_NAME** (e.g. Queensland State Emergency Service) and **ACCOUNT_CODE** (talk to core team to have one assigned) as relevant.
 
-TBD Display Guidelines (link to be added)
+
+## References
+
+- [Twitter display requirements](https://dev.twitter.com/overview/terms/display-requirements)
