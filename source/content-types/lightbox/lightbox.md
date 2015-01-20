@@ -10,7 +10,7 @@ A lightbox is a user interface (UI) pattern that displays content inside of a po
 An accessible lightbox has been integrated with the template and can be invoked in a number of predefined situations.
 
 **Important:**
- * If you would like to use a lightbox for a different situation, please contact the Smart Service core team Product Manager to discuss adding the new use case to the template
+ * If you would like to use a lightbox for a different situation, please contact us to discuss adding the new use case to the template
  * Please don't use the following hooks for situations other than the ones intended. If you do misuse them, we can't guarantee that they will continue to work as expected (e.g. the approach for presenting definitions may change in ways that are appropriate for definitions, but not for your situation).
 
 **Lightbox examples:**
