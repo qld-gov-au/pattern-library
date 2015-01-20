@@ -101,7 +101,7 @@ If a counter closes during a lunch period, specify a range in the `am` and `pm` 
 
 If a counter is open in the morning and closed for the afternoon, put a range in the `am` column and leave the `pm` column blank. Example: `8:30-12:00`,
 
-Specify the normal operating hours for the counter. It is assumed counters will be closed on Queensland and local public holidays. This will be managed by the Public holidays API.
+Specify the normal operating hours for the counter. It is assumed counters will be closed on Queensland and local public holidays.
 
 Closure dates can be specified as a range. Separate multiple values with semi-colons. Example: `24/12/2012-1/1/2013`; `1/2/2013` means closed from 24 December 2012 through to 1 January 2013 (inclusive) and closed again on 1 February 2013. Only closures that are happening within the next 5 weeks will be displayed on the page.
 
@@ -116,7 +116,7 @@ Closure data type | CSV data | Displayed as
 **Date range** | `24/12/2012-1/1/2013` | We are closed 24 December 2012--1 January 2013.
 **Custom** | `after 1.30pm on 27, 28 and 31 December 2012` | We are closed after 1.30pm on 27, 28 and 31 December 2012.
 **Multiple dates** | `24/12/2012-26/12/2012; 28/12/2012-1/1/2013` | We are closed 24-~~26 December 2012 and 28 December 2012~~-1 January 2013.
-**Mixed** | `24/12/2012-26/12/2012; after 1.30pm on 27, 28 and 31 December 2012; 1/1/2013` | We are closed 24--26 December 2012, after 1.30pm on 27, 28 and 31 December 2012 and 1 January 2013.
+**Mixed** | `24/12/2012-26/12/2012; after 1.30pm on 27, 28 and 31 December 2012; 1/1/2013` | We are closed 24--26 December 2012, after 1.30pm on 27, 28 and 31 December p2012 and 1 January 2013.
 
 Please discuss any additional requirements with the QGov Online team.
 
