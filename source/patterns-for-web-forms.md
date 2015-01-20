@@ -38,6 +38,8 @@ A form is a preamble (opening instructions), list of questions (e.g. What is you
 
 ### Title
 
+A form should have a title (name) implemented as a heading.
+
 ### Status
 The status of a form is not usually shown when a customer first opens the page. It is used when the user is returned to the form, providing information on why and what steps they need to take next. Often this is a summary of invalid answers that need to be corrected. It may also be server-side errors (for example, an error sending the email from an email form).
 
