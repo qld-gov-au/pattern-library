@@ -298,12 +298,11 @@ Groups may be nested.
 ![Postal address](images/screenshot-postal-address.png)
 
 #### Collecting personal information
-TODO
-- privacy (notices, required vs optional)
-- supporting autofill in browsers (important to use 'city' in the label for 'suburb, town, city' field)
+
+Refer to [Information access and use policy - IS33](http://www.qgcio.qld.gov.au/products/qgea-documents/548-information/2333-information-access-and-use-is33-info) for guidance on information privacy.
 
 ##### Autofill
-Customers may use autofill features in their browsers to fill out personal information. To support this, it is important to follow common conventions for labels and fields. It is also important to note that when autofill is used, it does not fire `change`, `blur` or `keypress` events on fields. If you are using custom validity checks, you should always test the `.value` property, and must not rely on events to detect user input.
+Customers may use autofill features in their browsers to fill out personal information. To support this, it is important to follow common (or US-based) conventions for labels and fields (e.g. 'city' for town/suburb). It is also important to note that when autofill is used, it does not fire `change`, `blur` or `keypress` events on fields. If you are using custom validity checks, you should always test the `.value` property, and must not rely on events to detect user input.
 
 #### "Either or" questions
 Customers may have the option to answer 1 question or another. You can use progressive disclosure (present the options using radio buttons, and then display the relevant questions when the customer clicks the radio button) or use the 'xor' pattern. Progressive disclosure is the better choice if the fields are required.
