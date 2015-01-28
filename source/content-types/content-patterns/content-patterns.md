@@ -71,204 +71,36 @@ Use this pattern to include a data table within a content page. The template (an
 <table id="example2" class="data-table">
     <thead>
         <tr>
-            <th>
-                <a href="birthSelect.m?sort=RegistrationNumberPart2$RegistrationNumberPart4$RegistrationNumberPart3$#matches">Reg #</a>
-            </th>
-            <th>
-                <a href="birthSelect.m?sort=ChildGivenNames#matches">First Name</a>
-            </th>
-            <th>
-                <a href="birthSelect.m?sort=ChildSurname$FatherSurname$MotherSurname$#matches">Last Name</a>
-            </th>
-            <th>
-                <a href="birthSelect.m?sort=FatherGivenNames#matches">Father's Name</a>
-            </th>
-            <th>
-                <a href="birthSelect.m?sort=MotherGivenNames#matches">Mother's Name</a>
-            </th>
+            <th><a href="birthSelect.m?sort=RegistrationNumberPart2$RegistrationNumberPart4$RegistrationNumberPart3$#matches">Reg #</a></th>
+            <th><a href="birthSelect.m?sort=ChildGivenNames#matches">First Name</a></th>
+            <th><a href="birthSelect.m?sort=ChildSurname$FatherSurname$MotherSurname$#matches">Last Name</a></th>
+            <th><a href="birthSelect.m?sort=FatherGivenNames#matches">Father's Name</a></th>
+            <th><a href="birthSelect.m?sort=MotherGivenNames#matches">Mother's Name</a></th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>
-                <a href="?id=1910/C2020">1910/C2020</a>
-            </td>
+            <td><a href="?id=1910/C2020">1910/C2020</a></td>
             <td>Dorothy Grace</td>
             <td>Boyle</td>
             <td>Henry Courtney</td>
             <td>Teresa Maria Young</td>
         </tr>
         <tr>
-            <td>
-                <a href="?id=1911/C11130">1911/C11130</a>
-            </td>
+            <td><a href="?id=1911/C11130">1911/C11130</a></td>
             <td>James Emmet</td>
             <td>Boyle</td>
             <td>Francis</td>
             <td>Mary Ellen Murtagh</td>
         </tr>
         <tr>
-            <td>
-                <a href="?id=1913/C38">1913/C38</a>
-            </td>
+            <td><a href="?id=1913/C38">1913/C38</a></td>
             <td>Mona Marguerite</td>
             <td>Boyle</td>
             <td></td>
             <td>Emmeline Boyle</td>
         </tr>
-        <tr>
-            <td>
-                <a href="?id=1914/B34754">1914/B34754</a>
-            </td>
-            <td>Edith Caroline</td>
-            <td>Boyle</td>
-            <td>James Peter</td>
-            <td>Jean Grant</td>
-        </tr>
-        <tr>
-            <td>
-                <a href="?id=1913/C8300">1913/C8300</a>
-            </td>
-            <td>James Joseph</td>
-            <td>Boyle</td>
-            <td>John Joseph</td>
-            <td>Bridget O'Brien</td>
-        </tr>
-        <tr>
-            <td>
-                <a href="?id=1914/C8571">1914/C8571</a>
-            </td>
-            <td>Myrtle May</td>
-            <td>Boyle</td>
-            <td>Frank Patrick</td>
-            <td>Ruby Margaret Duncan</td>
-        </tr>
-        <tr>
-            <td>
-                <a href="?id=1910/C3457">1910/C3457</a>
-            </td>
-            <td>Eric Neils Henry</td>
-            <td>Boyle</td>
-            <td>Frederick Thomas</td>
-            <td>Hildur Sophia Kathrina Brandt</td>
-        </tr>
-        <tr>
-            <td>
-                <a href="?id=1912/B27845">1912/B27845</a>
-            </td>
-            <td>James Peter</td>
-            <td>Boyle</td>
-            <td>Francis</td>
-            <td>Mary Cranny</td>
-        </tr>
-        <tr>
-            <td>
-                <a href="?id=1912/B30166">1912/B30166</a>
-            </td>
-            <td>Naomi Ruth St.Aubyn</td>
-            <td>Boyle</td>
-            <td>David</td>
-            <td>Caroline Beatrice Mary Hollinworth</td>
-        </tr>
-        <tr>
-            <td>
-                <a href="?id=1913/B31930">1913/B31930</a>
-            </td>
-            <td>Ernest Frederick</td>
-            <td>Boyle</td>
-            <td>Frederick Thomas</td>
-            <td>Hildur Sophia Catherina Brandt</td>
-        </tr>
-        <tr>
-            <td>
-                <a href="?id=1913/C11557">1913/C11557</a>
-            </td>
-            <td>John Colin Patrick</td>
-            <td>Boyle</td>
-            <td>John Phelps Archibald</td>
-            <td>Mary McGrath</td>
-        </tr>
-        <tr>
-            <td>
-                <a href="?id=1912/C4458">1912/C4458</a>
-            </td>
-            <td>Neville Ashley</td>
-            <td>Boyle</td>
-            <td>Clarence Henry</td>
-            <td>Bessie Fletcher Hankinson</td>
-        </tr>
-        <tr>
-            <td>
-                <a href="?id=1914/C12591">1914/C12591</a>
-            </td>
-            <td>Alfred Bertram</td>
-            <td>Boyle</td>
-            <td>Robert Bertram</td>
-            <td>Elizabeth Anna Frazer</td>
-        </tr>
-        <tr>
-            <td>
-                <a href="?id=1913/C5138">1913/C5138</a>
-            </td>
-            <td>George Patrick</td>
-            <td>Boyle</td>
-            <td>Joseph Patrick</td>
-            <td>Annie Amelia Soanes</td>
-        </tr>
-        <tr>
-            <td>
-                <a href="?id=1910/C7282">1910/C7282</a>
-            </td>
-            <td>John Francis</td>
-            <td>Boyle</td>
-            <td>John</td>
-            <td>Bridget O'Brien</td>
-        </tr>
-        <tr>
-            <td>
-                <a href="?id=1913/C3884">1913/C3884</a>
-            </td>
-            <td>Stella Josephine</td>
-            <td>Boyle</td>
-            <td>John Francis</td>
-            <td>Lily Mary Coase</td>
-        </tr>
-        <tr>
-            <td>
-                <a href="?id=1913/C8370">1913/C8370</a>
-            </td>
-            <td>Alfred Charles</td>
-            <td>Boyle</td>
-            <td>Lurenzo Miller</td>
-            <td>Rose Carline Jones</td>
-        </tr>
-        <tr>
-            <td>
-                <a href="?id=1912/C8476">1912/C8476</a>
-            </td>
-            <td>Grace Ellen</td>
-            <td>Boyle</td>
-            <td>Francis Patrick</td>
-            <td>Ruby Margaret Duncan</td>
-        </tr>
-        <tr>
-            <td>
-                <a href="?id=1911/C7113">1911/C7113</a>
-            </td>
-            <td>John Henry</td>
-            <td>Boyle</td>
-            <td>Thomas Henry</td>
-            <td>Agnes Louise Carl</td>
-        </tr>
-        <tr>
-            <td>
-                <a href="?id=1914/C11016">1914/C11016</a>
-            </td>
-            <td>Sydney Charles</td>
-            <td>Boyle</td>
-            <td>Richard Henery</td>
-            <td>Dorothy Hanna Fick</td>
-        </tr>
+…
     </tbody>
 </table>
 ```
@@ -319,114 +151,7 @@ Use this pattern to include a data table within a content page. The template (an
             <td>Table data</td>
             <td>Table data</td>
         </tr>
-        <tr>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-        </tr>
-        <tr>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-        </tr>
-        <tr>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-        </tr>
-        <tr>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-        </tr>
-        <tr>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-        </tr>
-        <tr>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-        </tr>
-        <tr>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-        </tr>
-        <tr>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-        </tr>
-        <tr>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-            <td>Table data</td>
-        </tr>
+…
     </tbody>
 </table>
 ```
