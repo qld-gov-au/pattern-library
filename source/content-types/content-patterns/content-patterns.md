@@ -12,6 +12,7 @@
 - [Side-by-side comparison](#side-by-side-comparison)
 - [Side-by-side comparison (advantages and disadvantages)](#side-by-side-comparison-advantages-and-disadvantages)
 - [Cross-selling links](#cross-selling-links)
+- [News slideshow](#news-slideshow)
 
 Within content, patterns may be used to add semantics that can be enhanced in the presentation and behaviour layers.
 - Figures (aka cut-ins)
@@ -393,3 +394,26 @@ Use [hCard](http://microformats.org/wiki/hcard)
 ```
 ### Screenshot
 ![Cross-selling link](images/cross-selling.png)
+
+## News slideshow
+
+A slideshow pattern is available for the news/featured section on index pages.
+
+Each news item should have:
+
+- a title
+- short summary
+- an image 373px wide and 189px high
+- a dedicated page with more information (link the image and 'More…' link to this page)
+
+If there are more items than fit in the available space, then the slideshow will scroll between them. The slideshow will automatically play when the page loads. The slideshow can be paused on load by replacing the class `autoplay-enabled` with `autoplay-disabled`.
+
+```html
+<div class="slide-runner autoplay-enabled">
+<div id="featured-1" class="section"><h3>Tropical Cyclone Marcia</h3><a href="http://www.qldalert.com/"><span class="feature"><img height="189" width="373" alt="Palm tree in a storm | © The State of Queensland qldalert" src="/assets/images/home/disaster/cyclone.jpg"/></span></a><div class="feature-content"><p>Find out about school closures, applying for financial help and cleaning up safely.</p><p class="more"><a title="Read more about: Tropical Cyclone Marcia" href="http://www.qldalert.com/">More&hellip;</a></p></div></div>
+
+<div id="featured-2" class="section"><h3>2015 annual land valuations</h3><a href="http://www.qld.gov.au/environment/land/title/valuation/"><span class="feature"><img height="189" width="373" alt="Houses on a hillside | © The State of Queensland" src="/assets/images/home/land-valuations-2015.jpg"/></span></a><div class="feature-content"><p>This year's land valuation notices were issued on 4 March. Find out what they mean, how land is valued, and what to do if you don't receive yours.</p><p class="more"><a title="Read more about: 2015 annual land valuations" href="http://www.qld.gov.au/environment/land/title/valuation/">More&hellip;</a></p></div></div>
+
+<div id="featured-3" class="section"><h3>Motorcycle road rule changes</h3><a href="http://www.qld.gov.au/transport/news/features/motorcycle-changes/index.html"><span class="feature"><img height="189" width="373" alt="Graphic of a motorbike lane filtering between cars | © The State of Queensland" src="/assets/images/home/motorcycle-lane-filter.jpg"/></span></a><div class="feature-content"><p>Road rules for fully licensed motorcycle riders have changed. Read about the changes to lane filtering, riding on road shoulders and choice of helmets.</p><p class="more"><a title="Read more about: Motorcycle road rule changes" href="http://www.qld.gov.au/transport/news/features/motorcycle-changes/index.html">More&hellip;</a></p></div></div>
+</div>
+```
