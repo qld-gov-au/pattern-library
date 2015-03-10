@@ -403,7 +403,7 @@ Each news item should have:
 
 - a title
 - short summary
-- an image 373px wide and 189px high
+- an image (284px × 113px for index pages, 373px × 189px for home page)
 - a dedicated page with more information (link the image and 'More…' link to this page)
 
 If there are more items than fit in the available space, then the slideshow will scroll between them. The slideshow will automatically play when the page loads. The slideshow can be paused on load by replacing the class `autoplay-enabled` with `autoplay-disabled`.
