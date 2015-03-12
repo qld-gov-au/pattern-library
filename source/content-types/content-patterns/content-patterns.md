@@ -403,10 +403,12 @@ Each news item should have:
 
 - a title
 - short summary
-- an image 373px wide and 189px high
+- an image (284px × 113px for index pages, 373px × 189px for home page)
 - a dedicated page with more information (link the image and 'More…' link to this page)
 
 If there are more items than fit in the available space, then the slideshow will scroll between them. The slideshow will automatically play when the page loads. The slideshow can be paused on load by replacing the class `autoplay-enabled` with `autoplay-disabled`.
+
+### HTML
 
 ```html
 <div class="slide-runner autoplay-enabled">
@@ -417,3 +419,7 @@ If there are more items than fit in the available space, then the slideshow will
 <div id="featured-3" class="section"><h3>Motorcycle road rule changes</h3><a href="http://www.qld.gov.au/transport/news/features/motorcycle-changes/index.html"><span class="feature"><img height="189" width="373" alt="Graphic of a motorbike lane filtering between cars | © The State of Queensland" src="/assets/images/home/motorcycle-lane-filter.jpg"/></span></a><div class="feature-content"><p>Road rules for fully licensed motorcycle riders have changed. Read about the changes to lane filtering, riding on road shoulders and choice of helmets.</p><p class="more"><a title="Read more about: Motorcycle road rule changes" href="http://www.qld.gov.au/transport/news/features/motorcycle-changes/index.html">More&hellip;</a></p></div></div>
 </div>
 ```
+
+### Screenshot
+
+![News slider](images/news-slider.png)
