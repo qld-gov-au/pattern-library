@@ -174,6 +174,28 @@ Best practice and usage:
 Notes:
 - You can find useful information about how set up data tables from the usage section: https://datatables.net/usage
 
+## Definition list grid layout
+
+Definition lists exist in HTML to pair definitions with values and can be useful for presenting contact details, confirming form inputs and other simple data structures.
+
+### XHTML 1.0
+
+Use the class `grid` with your definition list for a responsive layout: table-like on wider displays, linear on narrow devices.
+
+```html
+<dl class="grid">
+    <dt id="phone">Phone:</dt>
+    <dd>13 23 80</dd>
+
+    <dt id="fax">Fax:</dt>
+    <dd>(07) 4091 2668</dd>
+    …
+</dl>
+```
+
+### Screenshot
+![Definition list grid](images/dl-grid.png)
+
 ## Downloadable document link
 
 The following approach allows the 'title' to be underlined without the 'meta' being underlined in all browsers.
