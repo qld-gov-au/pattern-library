@@ -295,6 +295,9 @@ Order contact details as follows:
 - Address---**only if** there is a counter service available to government customers.
 
 Use [hCard](http://microformats.org/wiki/hcard)
+
+Can be combined with the [Definition list grid layout](#definition-list-grid-layout) shown above.
+
 ### XHTML 1.0
 ```html
 <div class="vcard">
