@@ -2,6 +2,7 @@
 
 - [Figures (images, diagrams, captions)](#figures-images-diagrams-captions)
 - [Data tables (sortable tables)](#data-tables-sortable-tables)
+- [Definition list grid layout](#definition-list-grid-layout)
 - [Downloadable document link](#downloadable-document-link)
 - [Meta links](#meta-links)
 - [Pull-quote](#pull-quote)
