@@ -296,7 +296,7 @@ Order contact details as follows:
 
 Use [hCard](http://microformats.org/wiki/hcard)
 
-Can be combined with the [Definition list grid layout](#definition-list-grid-layout) shown above.
+Can be combined with the [definition list grid layout](#definition-list-grid-layout) shown above.
 
 ### XHTML 1.0
 ```html
