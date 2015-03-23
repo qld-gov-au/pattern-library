@@ -2,6 +2,7 @@
 
 - [Figures (images, diagrams, captions)](#figures-images-diagrams-captions)
 - [Data tables (sortable tables)](#data-tables-sortable-tables)
+- [Responsive tables](#responsive-tables)
 - [Downloadable document link](#downloadable-document-link)
 - [Meta links](#meta-links)
 - [Pull-quote](#pull-quote)
@@ -173,6 +174,10 @@ Best practice and usage:
 
 Notes:
 - You can find useful information about how set up data tables from the usage section: https://datatables.net/usage
+
+## Responsive tables
+
+Use the [FooTable plugin](http://fooplugins.com/plugins/footable-jquery/) to control how tables are rendered at different resolutions. The script and styles are bundled into the SWE template. Opt-in by placing the `footable` class on a table, and define breakpoints using the HTML5 data attribute.
 
 ## Downloadable document link
 
