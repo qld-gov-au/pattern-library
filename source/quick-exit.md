@@ -1,10 +1,10 @@
 # Quick Exit
 ## Summary
-Quick Exit from a page.
+Quick exit from a page. With the help of this function users can exit out of a page immediately without any browser history.
 
 ## Usage
 ### How to display Quick Exit on a page
-Include following code in your HTML file.
+Include the following code in your HTML file.
 
 ```
 <div id="quick-exit">

@@ -7,7 +7,7 @@
 - [Feedback](#feedback)
 - [Sponsors](#sponsors)
 - [Beta indicator](#beta-indicator)
-- [App aside](#app)
+- [App aside](#app-aside)
 
 ## Contacts
 

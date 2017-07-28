@@ -1,6 +1,6 @@
 # Print remote pages
 ## Summary
-With the help of this we can print the terms and conditions section pages content.
+This functionality enables remote pages printing.
 
 ## Usage
 Add **qg-print-guide** class to the toc. Please note that the script checks the combination of toc id and qg-print-guide class.
