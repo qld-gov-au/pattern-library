@@ -495,7 +495,7 @@ The is an instructions-based API that requires no scripting. Place instructions 
 
 ## Autocomplete address form
 This form is composed of a Google auto-suggest location field and other address fields (Street address, City, State, Postal code, Country).
-When user selects a location in location, corresponding address fields will be filled by the javascript.
+When user selects a location in location field, corresponding address fields will be filled by the javascript.
 
 This functionality can be implemented by placing the below given code in your template
 #### Example: via SSI
