@@ -29,7 +29,7 @@ Include following code in your map/index.html. Make sure the text within the cur
      </li>
   </ol>
 </form>
-<a id="data-url" data-zoom="5" data-center="-20,146" data-set="" data-controlsposition="TOP_RIGHT" data-clustergridsize="30" data-url="https://data.qld.gov.au/dataset/q-ride-providers/resource/0647759d-9f68-44f9-bd7e-eb96d37d11e4" data-strictbounds="true" data-location=" , QLD">View full Data</a>
+<a id="data-url" data-zoom="5" data-center="-20,146" data-set="" data-controlsposition="TOP_RIGHT" data-clustergridsize="30" data-url="https://data.qld.gov.au/dataset/q-ride-providers/resource/0647759d-9f68-44f9-bd7e-eb96d37d11e4" data-strictbounds="true" data-location=" , QLD" data-orderby="Title">View full Data</a>
 <div id="search-results-container">
     <h2 class="resultset-title"></h2>
         <ol id="search-results">
@@ -136,6 +136,7 @@ data-clustergridsize |	optional	| | integer |	defines area in pixels should form
 data-strictbounds |	optional |	true/false |	true, i.e. returns locations confined to Qld |	If you donot want autocomplete location to return results confined to Qld, set this value to false
 data-search-template |	optional | | |url to template you would like to display your search results
 data-location |	optional |	string (example : " , QLD")	| |in location input field, when user enters location, the input field will be appended by the value given.<br>For example, if data-location= ", QLD", and user enters "Richmond" in location input field, the value will be altered to "Richmond, QLD"
+data-orderby | optional | string (example: "Title") |   | search results will be displayed ordered by data-orderby value.<br>This value should be column name in data
 
 You can also include following pre-defined templates
  - /assets/includes/dynamic/map/search-result.html

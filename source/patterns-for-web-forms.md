@@ -25,6 +25,7 @@
 - [Progressive disclosure](#progressive-disclosure)
 	- [Showing sections of a form one at a time (e.g. step-by-step wizard)](#showing-sections-of-a-form-one-at-a-time-eg-step-by-step-wizard)
     - [Hiding irrelevant questions](#hiding-irrelevant-questions)
+- [Autocomplete address form](#autocomplete-address-form)
 - [Client-side validation](#client-side-validation)
 	- [Validation techniques](#validation-techniques)
     	- [Example: email address must be a .qld.gov.au address](#example-email-address-must-be-a-qldgovau-address)
@@ -491,6 +492,59 @@ The is an instructions-based API that requires no scripting. Place instructions 
 ```
 ##### Screenshot
 ![Relevance instruction](images/screenshot-relevance-instruction.png)
+
+## Autocomplete address form
+This form is composed of a Google auto-suggest location field and other address fields (Street address, City, State, Postal code, Country).
+When user selects a location in location, corresponding address fields will be filled by the javascript.
+
+This functionality can be implemented by placing the below given code in your template
+#### Example: via SSI
+```html
+<!--#include virtual="https://www.qld.gov.au/includes/dynamic/forms/location-autocomplete.html"-->
+```
+
+#### Example: via Html template
+```html
+<li class="text location">
+    <label for="location-autocomplete">
+        <span class="label">Location or postcode</span>
+    </label>
+    <input type="text" name="location" id="location-autocomplete" class="location-autocomplete" size="30" value="" placeholder="Enter location or postcode" />
+    <!--#include virtual="/assets/includes/dynamic/maps/get-current-location.html" -->
+    <ol class="address-autocomplete questions">
+        <li>
+            <label for="street">
+                <span class="label">Street address</span>
+            </label>
+            <input type="text" data-type="street" disabled="disabled" id="street" name="street">
+        </li>
+        <li>
+            <label for="city">
+                <span class="label">City</span>
+            </label>
+            <input type="text" data-type="city" disabled="disabled" id="city" name="city">
+        </li>
+        <li>
+            <label for="state">
+                <span class="label">State</span>
+            </label>
+            <input type="text" data-type="state" disabled="disabled" id="state" name="state">
+        </li>
+        <li>
+            <label for="zip">
+                <span class="label">Postal code</span>
+            </label>
+            <input type="text" data-type="zip" disabled="disabled" id="zip" name="zip">
+        </li>
+        <li>
+            <label for="country">
+                <span class="label">Country</span>
+            </label>
+            <input type="text" data-type="country" disabled="disabled" id="country" name="country">
+        </li>
+    </ol>
+</li>
+```
 
 ## Client-side validation
 Client-side validation is built into the SWE template. Fields are validated on `change` events and inline validation messages (shown with the label) are updated. All fields are validated on `submit` events and warnings are displayed in a summary placed before the `form` element.
