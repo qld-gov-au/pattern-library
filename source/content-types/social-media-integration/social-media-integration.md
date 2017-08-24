@@ -4,7 +4,6 @@
 - [Facebook](#facebook)
 
 ## Twitter
-##### Implementation Example:
 * Remove Twitter related SSI (If any) - '<del><!-#include virtual="/assets/includes/dynamic/twitter/aside.php?account=TMFranchise&list=transport-and-motoring&num=5"-></del>'
 * Add this HTML markup to a page
 ```html
@@ -16,10 +15,10 @@
 </div>
 ```
 * **Configure options**
-    * data-account="TMFranchise" - is the Twitter account name
-    * data-list="transport-and-motoring" - is the Twitter list name
-    * data-num="5" - is count of tweets to display
-    * data-widgetid="377609440007954432" - is the Twitter widget id
+    * **data-account**="TMFranchise" - is the Twitter account name
+    * **data-list**="transport-and-motoring" - is the Twitter list name
+    * **data-num**="5" - is count of tweets to display
+    * **data-widgetid**="377609440007954432" - is the Twitter widget id
 
 ## Facebook
 * Remove Facebook related SSI (If any) - '<del><!-#include virtual="/assets/includes/dynamic/facebook/aside.php"-></del>'
@@ -35,7 +34,7 @@
 </div>
 ```
 * **Configure options**
-    * data-href="https://www.facebook.com/TMRQld" - is the Facebook account URL
+    * **data-href**="https://www.facebook.com/TMRQld" - is the Facebook account URL
 
 
 ## General Social Media integration notes
