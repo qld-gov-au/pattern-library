@@ -8,7 +8,7 @@
 * Add this HTML markup to a page
 ```html
 <div class="qg-social-media">
-      <div class="aside twitter-updates" data-account="TMFranchise" data-list="transport-and-motoring" data-num="5" data-widgetid="377609440007954432">
+      <div class="aside twitter-updates" data-account="TMFranchise" data-list="transport-and-motoring" data-num="5" data-widgetid="12345678899">
       	<div class="section-header"><h2>Twitter feed</h2></div>
       	<p class="more"><a href="http://twitter.com/TMFranchise/lists/transport-and-motoring" title="More from the Transport and motoring franchise on Twitter">View all</a></p>
       </div>
@@ -18,7 +18,7 @@
     * **data-account**="TMFranchise" - is the Twitter account name
     * **data-list**="transport-and-motoring" - is the Twitter list name
     * **data-num**="5" - is count of tweets to display
-    * **data-widgetid**="377609440007954432" - is the Twitter widget id
+    * **data-widgetid**="12345678899" - is the Twitter widget id
 
 ## Facebook
 * Remove Facebook related SSI (If any) - '<del><!-#include virtual="/assets/includes/dynamic/facebook/aside.php"-></del>'
