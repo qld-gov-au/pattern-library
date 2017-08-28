@@ -203,16 +203,16 @@ HTML Code
 	<div class="section-header">
 		<h2>Heading</h2>
 	</div>
-	<img src="/assets/v2/images/skin/eg-readyqld_icon.png" alt="ReadyQld" width="124" class="icon" />
+	<img src="https://static.qgov.net.au/assets/v2/images/skin/eg-readyqld_icon.png" alt="ReadyQld" width="124" class="icon" />
 	<ul>
 		<li>
 			<a href="http://itunes.apple.com/au/app/readyqld/id481034135?mt=8&amp;uo=4">
-				<img src="/assets/v2/images/skin/app-app-store-badge.png" alt="ReadyQld by Volunteering Queensland Inc for iPhone/iPad" style="border: 0;" />
+				<img src="https://static.qgov.net.au/assets/v2/images/skin/app-app-store-badge.png" alt="ReadyQld by Volunteering Queensland Inc for iPhone/iPad" style="border: 0;" />
 			</a>
 		</li>
 		<li>
 			<a href="https://play.google.com/store/apps/details?id=au.org.volunteeringqld.readyqld">
-				<img src="/assets/v2/images/skin/app-google-play-badge.png" alt="ReadyQld—Available in Google Play" />
+				<img src="https://static.qgov.net.au/assets/v2/images/skin/app-google-play-badge.png" alt="ReadyQld—Available in Google Play" />
 			</a>
 		</li>
 	</ul>
