@@ -23,7 +23,7 @@
 
 ## Facebook
 * Remove Facebook related SSI (If any) - '<del><!-#include virtual="/assets/includes/dynamic/facebook/aside.php"-></del>'
-* Add this HTML markup to a page (*if 'class="qg-social-feed"' is already there on a page then just copy 'facebook updates' block and add it inside the 'qg-social-feed' container*)
+* Add this HTML markup to a page (*if 'class="qg-social-media"' is already there on a page then just copy 'facebook updates' block and add it inside the 'qg-social-media' container*)
 ```html
 <div class="qg-social-media">
         <div class="aside facebook-updates" data-href="https://www.facebook.com/TMRQld">
@@ -38,20 +38,19 @@
     * **data-href**="https://www.facebook.com/TMRQld" - is the Facebook account URL
 
 ## Instagram
-* Remove Facebook related SSI (If any) - '<del><!-#include virtual="/assets/includes/dynamic/facebook/aside.php"-></del>'
-* Add this HTML markup to a page (*if 'class="qg-social-feed"' is already there on a page then just copy 'facebook updates' block and add it inside the 'qg-social-feed' container*)
+* Add this HTML markup to a page (*if 'class="qg-social-media"' is already there on a page then just copy 'instagram-updates' block and add it inside the 'qg-social-media' container*)
 ```html
 <div class="qg-social-media">
          <div class="aside instagram-updates" data-token="{DATA ACCESS TOKEN}">
              <div class="section-header"><h2>Instagram feed</h2></div>
               <p class="more">
-                    <a href="https://www.instagram.com/asifaminb/" title="My Instagram">View all</a>
+                    <a href="{Instagram account URL}" title="My Instagram">View all</a>
               </p>
           </div>
 </div>
 ```
 * **Configure options**
-    * **data-token**=Refer to this website for detailed steps on how to generate access token https://jelled.com/instagram/access-token
+    * **data-token**=Refer to this website for detailed steps on how to generate access token https://www.instagram.com/developer/authentication/
 
 
 ## General Social Media integration notes
