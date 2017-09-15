@@ -100,6 +100,13 @@ Notes:
 - to create a primary action (green button), surround the button with `<strong>` tags
 - an alternate "blue" primary action is available, replacing `<strong>` with `<em>`. Guidelines for when to use the alternate style are to be determined, please contact the QGov product manager if you wish to use this style. Note that the alternate primary action style is *not to be used for secondary actions* (which are usually grey).
 
+### Opt-in functionality to disable submit button after submission 
+To restrict duplicate submission of forms, add <b>data-singlesubmit="true"</b> attribute to the form element.
+This is opt-in method, which disables the submit button after form submission.
+
+```html
+<form id="form-id" data-singlesubmit="true" action="form-action">
+```
 ## Questions
 By ‘question’ we mean the question (prompt) and answer. We (the authors of the form) ask the question, the customer answers.
 
