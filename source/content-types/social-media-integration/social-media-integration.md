@@ -41,7 +41,7 @@
 * Add this HTML markup to a page (*if 'class="qg-social-media"' is already there on a page then just copy 'instagram-updates' block and add it inside the 'qg-social-media' container*)
 ```html
 <div class="qg-social-media">
-         <div class="aside instagram-updates" data-token="{DATA ACCESS TOKEN}">
+         <div class="aside instagram-updates" data-num="4" data-token="{DATA ACCESS TOKEN}">
              <div class="section-header"><h2>Instagram feed</h2></div>
               <p class="more">
                     <a href="{Instagram account URL}" title="My Instagram">View all</a>
@@ -51,6 +51,7 @@
 ```
 * **Configure options**
     * **data-token**=Refer to this website for detailed steps on how to generate access token https://www.instagram.com/developer/authentication/
+    * **data-num**="5" - Number of images
 
 
 ## General Social Media integration notes
