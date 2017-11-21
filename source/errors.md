@@ -19,6 +19,7 @@ Page logic: Page should be able to identify errors, display error info in an ele
 		if(qg && qg.swe && qg.swe.handleErrors && typeof qg.swe.handleErrors === 'function') qg.swe.handleErrors('.' + $errorInfoClass); //triggers error handling functionality i.e. qg.swe.handleErrors
 	}
 ```
-Plugin generates a hidden form accumulating all available error info and displays a submit button for enabling users to notify support ream
+Plugin generates a hidden form accumulating all available error info and displays a submit button for enabling users to notify support team
+
 ![error handling screenshot](images/error-handling.png)
 
