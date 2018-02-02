@@ -4,13 +4,16 @@
 
 The **Single Website Experience (SWE)** is a frontend framework used for www.qld.gov.au 
 
-The SWE has two flavours.  SWE 2 and SWE 3.
+The SWE has two flavours. 
 
-**SWE 2** is a frontend framework used for www.qld.gov.au
+- **SWE 2** is a frontend framework used for www.qld.gov.au
+	- SWE 2 is **not supported** for new websites
+	- SWE 2 will be deprecated at the close of 2018
 
-SWE 2 is **not supported** for new websites and will be deprecated at the close of 2018.
-
-**SWE 3** is a rapid protoyping framework, built on bootstrap 3, that will replace SWE 2 in 2018.  SWE 3's appearance and functionality reflects SWE 2.
+- **SWE 3** is a rapid protoyping framework, built on bootstrap 3
+	- SWE 3 is used for all new websites
+	- **SWE 3 replaces SWE 2**
+	- SWE 3's appearance and functionality reflects SWE 2
 
 ## Quick links
 
