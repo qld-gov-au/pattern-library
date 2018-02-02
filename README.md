@@ -2,16 +2,27 @@
 
 **Great State. Great Patterns.**
 
+The **Single Website Experience (SWE)** is a frontend framework used for www.qld.gov.au 
+
+The SWE has two flavours.  SWE 2 and SWE 3.
+
+**SWE 2** is a frontend framework used for www.qld.gov.au. SWE2 is no longer supported for new websites and will be deprectaed at the close of 2018.
+**SWE 3** is a rapid protoyping framework, built on bootstrap 3, that will replace SWE 2 in 2018.  SWE 3's appearance and functionality reflects SWE 2.
+
 ## Quick links
 
 - [Single Website Experience (SWE) templates](https://qld-gov-au.github.io/swe_template/)
 - [Consistent User Experinece (CUE) standard](https://www.forgov.qld.gov.au/cue)
-- ~~[Sketch shared library (v0.1)](http://#)~~ :rocket: 
 
 ## Pattern library
 
-- [Content](https://github.com/qld-gov-au/pattern-library/blob/master/source/content-types/content-patterns/content-patterns.md)
+- [Content types](https://github.com/qld-gov-au/pattern-library/blob/master/source/content-types/content-patterns/content-patterns.md)
 	- [Figures (images, diagrams, captions)](https://github.com/qld-gov-au/pattern-library/blob/master/source/content-types/content-patterns/content-patterns.md#figures-images-diagrams-captions)
+	- [Status messages](https://github.com/qld-gov-au/pattern-library/blob/master/source/content-types/web-applications/web-applications.md#status-box) :thinking:
+		- [Warnings](https://github.com/qld-gov-au/pattern-library/blob/master/source/content-types/web-applications/web-applications.md#warnings)
+		- [Information](https://github.com/qld-gov-au/pattern-library/blob/master/source/content-types/web-applications/web-applications.md#information)
+		- [Success](https://github.com/qld-gov-au/pattern-library/blob/master/source/content-types/web-applications/web-applications.md#success)
+		- [Success (step)](https://github.com/qld-gov-au/pattern-library/blob/master/source/content-types/web-applications/web-applications.md#success-step) 
 	- [Data tables (sortable tables)](https://github.com/qld-gov-au/pattern-library/blob/master/source/content-types/content-patterns/content-patterns.md#data-tables-sortable-tables)
 	- [Downloadable document link](https://github.com/qld-gov-au/pattern-library/blob/master/source/content-types/content-patterns/content-patterns.md#downloadable-document-link)
 	- [Meta links](https://github.com/qld-gov-au/pattern-library/blob/master/source/content-types/content-patterns/content-patterns.md#meta-links)
@@ -34,8 +45,39 @@
 	- [Beta indicator](https://github.com/qld-gov-au/pattern-library/blob/master/source/content-types/asides/asides.md#beta-indicator)
 	- [App aside](https://github.com/qld-gov-au/pattern-library/blob/master/source/content-types/asides/asides.md#app-aside)
 - [Forms](https://github.com/qld-gov-au/pattern-library/blob/master/source/patterns-for-web-forms.md) :thinking:
-	- [Patterns for web forms](https://github.com/qld-gov-au/pattern-library/blob/master/source/patterns-for-web-forms.md)
-	- [Validation status box](https://github.com/qld-gov-au/pattern-library/blob/master/source/content-types/web-applications/web-applications.md#warnings) :thinking: (status alerts notifications, maybe this belongs in content types)
+	- [Structure of a form](https://github.com/qld-gov-au/pattern-library/blob/master/source/patterns-for-web-forms.md#structure-of-a-form) 
+		- [Title](https://github.com/qld-gov-au/pattern-library/blob/master/source/patterns-for-web-forms.md#title) 
+	    - [Status](https://github.com/qld-gov-au/pattern-library/blob/master/source/patterns-for-web-forms.md#status)
+	    	- [Validation messages](https://github.com/qld-gov-au/pattern-library/blob/master/source/patterns-for-web-forms.md#validation-messages)
+	    - [Preamble](https://github.com/qld-gov-au/pattern-library/blob/master/source/patterns-for-web-forms.md#preamble)
+	    - [List of questions](https://github.com/qld-gov-au/pattern-library/blob/master/source/patterns-for-web-forms.md#list-of-questions)
+	    - [Actions](https://github.com/qld-gov-au/pattern-library/blob/master/source/patterns-for-web-forms.md#actions)
+	- [Questions](https://github.com/qld-gov-au/pattern-library/blob/master/source/patterns-for-web-forms.md#questions)
+		- [Question prompts](https://github.com/qld-gov-au/pattern-library/blob/master/source/patterns-for-web-forms.md#question-prompts)
+	    	- [Hints](https://github.com/qld-gov-au/pattern-library/blob/master/source/patterns-for-web-forms.md#hints)
+	        - [Help](https://github.com/qld-gov-au/pattern-library/blob/master/source/patterns-for-web-forms.md#help)
+	    - [Answers](https://github.com/qld-gov-au/pattern-library/blob/master/source/patterns-for-web-forms.md#answers)
+	    	- [Short text answers](https://github.com/qld-gov-au/pattern-library/blob/master/source/patterns-for-web-forms.md#short-text-answers)
+	        - [Selecting from a list of choices](https://github.com/qld-gov-au/pattern-library/blob/master/source/patterns-for-web-forms.md#selecting-from-a-list-of-choices)
+	        	- [Please select](https://github.com/qld-gov-au/pattern-library/blob/master/source/patterns-for-web-forms.md#please-select)
+	            - [Other, please specify](https://github.com/qld-gov-au/pattern-library/blob/master/source/patterns-for-web-forms.md#other-please-specify)
+	        - [Radio buttons and checkboxes](https://github.com/qld-gov-au/pattern-library/blob/master/source/patterns-for-web-forms.md#radio-buttons-and-checkboxes)
+	        - [Groups](https://github.com/qld-gov-au/pattern-library/blob/master/source/patterns-for-web-forms.md#groups)
+	        - [Collecting personal information](https://github.com/qld-gov-au/pattern-library/blob/master/source/patterns-for-web-forms.md#collecting-personal-information)
+	        	- [Autofill](https://github.com/qld-gov-au/pattern-library/blob/master/source/patterns-for-web-forms.md#autofill)
+	        - ["Either or" questions](https://github.com/qld-gov-au/pattern-library/blob/master/source/patterns-for-web-forms.md#either-or-questions)
+	    - [Accessible labels](https://github.com/qld-gov-au/pattern-library/blob/master/source/patterns-for-web-forms.md#accessible-labels)
+	- [Progressive disclosure](https://github.com/qld-gov-au/pattern-library/blob/master/source/patterns-for-web-forms.md#progressive-disclosure)
+		- [Showing sections of a form one at a time (e.g. step-by-step wizard)](https://github.com/qld-gov-au/pattern-library/blob/master/source/patterns-for-web-forms.md#showing-sections-of-a-form-one-at-a-time-eg-step-by-step-wizard)
+	    - [Hiding irrelevant questions](https://github.com/qld-gov-au/pattern-library/blob/master/source/patterns-for-web-forms.md#hiding-irrelevant-questions)
+	- [Autocomplete address form](https://github.com/qld-gov-au/pattern-library/blob/master/source/patterns-for-web-forms.md#autocomplete-address-form)
+	- [Client-side validation](https://github.com/qld-gov-au/pattern-library/blob/master/source/patterns-for-web-forms.md#client-side-validation)
+		- [Validation techniques](https://github.com/qld-gov-au/pattern-library/blob/master/source/patterns-for-web-forms.md#validation-techniques)
+	    	- [Example: email address must be a .qld.gov.au address](https://github.com/qld-gov-au/pattern-library/blob/master/source/patterns-for-web-forms.md#example-email-address-must-be-a-qldgovau-address)
+	        - [Required checkboxes](https://github.com/qld-gov-au/pattern-library/blob/master/source/patterns-for-web-forms.md#required-checkboxes)
+	    - [HTML5 input type notes](https://github.com/qld-gov-au/pattern-library/blob/master/source/patterns-for-web-forms.md#html5-input-type-notes)
+	    - [HTML5 constraint validation API notes](https://github.com/qld-gov-au/pattern-library/blob/master/source/patterns-for-web-forms.md#html5-constraint-validation-api-notes)
+	- [References](https://github.com/qld-gov-au/pattern-library/blob/master/source/patterns-for-web-forms.md#references)
 - [Guides](https://github.com/qld-gov-au/pattern-library/blob/master/source/content-types/guide-pages/guide-pages.md)
 	- [Guide headings](https://github.com/qld-gov-au/pattern-library/blob/master/source/content-types/guide-pages/guide-pages.md#guide-headings)
 	- [Guide table of contents](https://github.com/qld-gov-au/pattern-library/blob/master/source/content-types/guide-pages/guide-pages.md#guide-table-of-contents)
@@ -75,8 +117,6 @@
 
 ## SWE Page models and templates
 
-**SWE 2** is a frontend framework used for www.qld.gov.au
-
 - [SWE 2 Page models and templates](https://qld-gov-au.github.io/swe_template/)
 	- Index page models
 	    - [Franchise index with asides](https://qld-gov-au.github.io/swe_template/franchise-index-with-asides.html)
@@ -95,8 +135,6 @@
 	- [Content form complex](https://qld-gov-au.github.io/swe_template/content-form-complex.html)
 	- [Search results](https://qld-gov-au.github.io/swe_template/search-results.html)
 	- [Javascript not enabled](https://qld-gov-au.github.io/swe_template/no-js-example.html)
-
-**SWE 3** is a rapid protoyping framework built on bootstrap 3.  SWE 3's appearance and functionality reflects SWE 2.
 
 - [SWE 3 Page models and templates](https://qld-gov-au.github.io/web-template-release/index.html)
 
