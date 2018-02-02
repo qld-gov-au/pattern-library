@@ -41,6 +41,8 @@ The SWE has two flavours.
 	- [Side-by-side comparison (advantages and disadvantages)](https://github.com/qld-gov-au/pattern-library/blob/master/source/content-types/content-patterns/content-patterns.md#side-by-side-comparison-advantages-and-disadvantages)
 	- [Cross-selling links](https://github.com/qld-gov-au/pattern-library/blob/master/source/content-types/content-patterns/content-patterns.md#cross-selling-links)
 	- [News slideshow](https://github.com/qld-gov-au/pattern-library/blob/master/source/content-types/content-patterns/content-patterns.md#news-slideshow)
+	- [Slider](https://github.com/qld-gov-au/pattern-library/blob/master/source/content-types/page-slider.md) :thinking:
+		- [Featured sslideshow based on xml feeds](https://github.com/qld-gov-au/pattern-library/blob/master/source/featured-slideshow-based-on-xml-feeds.md)
 - [Asides](https://github.com/qld-gov-au/pattern-library/blob/master/source/content-types/asides/asides.md)
 	- [Contacts (asides)](https://github.com/qld-gov-au/pattern-library/blob/master/source/content-types/asides/asides.md#contacts)
 	- [Emergency contact](https://github.com/qld-gov-au/pattern-library/blob/master/source/content-types/asides/asides.md#emergency-contact)
@@ -102,18 +104,17 @@ The SWE has two flavours.
 	- [Content expiry (XSSI)](https://github.com/qld-gov-au/pattern-library/blob/master/source/content-types/dynamic-content/dynamic-content.md#content-expiry)
 	- [Time-based content](https://github.com/qld-gov-au/pattern-library/blob/master/source/content-types/dynamic-content/dynamic-content.md#time-based-content)
 	- [Datasets](https://github.com/qld-gov-au/pattern-library/blob/master/source/content-types/dynamic-content/dynamic-content.md#datasets)
+		- [Events from CSV datasets](https://github.com/qld-gov-au/pattern-library/blob/master/source/events-from-csv-datasets.md)
+		- [Counters from csv Datasets](https://github.com/qld-gov-au/pattern-library/blob/master/source/counters-from-csv-datasets.md)
 - [News](https://github.com/qld-gov-au/pattern-library/blob/master/source/news-based-on-xml-feeds.md)
 - [Social media](https://github.com/qld-gov-au/pattern-library/blob/master/source/content-types/social-media-integration/social-media-integration.md)
 - [App links](https://github.com/qld-gov-au/pattern-library/blob/master/source/content-types/mobile-applications/mobile-applications.md)
 - [Print](https://github.com/qld-gov-au/pattern-library/blob/master/source/disable-print.md)
 - ~~[Web applications](https://github.com/qld-gov-au/pattern-library/blob/master/source/content-types/web-applications/web-applications.md)~~ :thinking: (already linked, should probably move to all this content in to Forms, under validationa lerts or something)
 - [Content types](https://github.com/qld-gov-au/pattern-library/blob/master/source/content-types/content-types.md) :thinking: (umm what?)
-- [Slider](https://github.com/qld-gov-au/pattern-library/blob/master/source/content-types/page-slider.md)
-- [counters-from-csv-datasets](https://github.com/qld-gov-au/pattern-library/blob/master/source/counters-from-csv-datasets.md):thinking:(combine dataset related?)
+
 - [disaster-alert-aside.md](https://github.com/qld-gov-au/pattern-library/blob/master/source/disaster-alert-aside.md)
 - [errors.md](https://github.com/qld-gov-au/pattern-library/blob/master/source/errors.md)
-- [events-from-csv-datasets.md](https://github.com/qld-gov-au/pattern-library/blob/master/source/events-from-csv-datasets.md):thinking:(combine dataset related?)
-- [featured-slideshow-based-on-xml-feeds.md](https://github.com/qld-gov-au/pattern-library/blob/master/source/featured-slideshow-based-on-xml-feeds.md):thinking:(move in with slider?)
 - [maps.md](https://github.com/qld-gov-au/pattern-library/blob/master/source/maps.md)
 - [news-based-on-xml-feeds.md](https://github.com/qld-gov-au/pattern-library/blob/master/source/news-based-on-xml-feeds.md):thinking:(already in news?)
 - [patterns-for-web-forms.md](https://github.com/qld-gov-au/pattern-library/blob/master/source/patterns-for-web-forms.md):thinking:(already in forms?)
@@ -144,7 +145,7 @@ The SWE has two flavours.
 
 - [SWE 3 Page models and templates](https://qld-gov-au.github.io/web-template-release/index.html)
 
-## Related docs
+## Related
 
 ### Consistent User Experience (CUE)
 
@@ -166,6 +167,13 @@ The SWE has two flavours.
 > This Queensland Government Enterprise Architecture (QGEA) policy states the minimum requirements for Queensland Government agencies in the creation, implementation and management of websites.
 
 - [Websites policy (IS26)](https://www.qgcio.qld.gov.au/documents/websites-policy-is26)
+
+### Naming conventions and categories in the Pattern libarary
+
+> Content pages may be further categorised by content type. e.g. form, guidelines, instruction etc.
+The [AGLS Document Vocabulary Encoding Scheme](http://www.agls.gov.au/documents/agls-document/) offers a starting point.
+
+- [Category types](https://github.com/qld-gov-au/pattern-library/blob/master/source/content-types/content-types.md)
 
 ---
 
