@@ -137,11 +137,11 @@ The SWE has two flavours.
 	    - [Large applications](https://qld-gov-au.github.io/swe_template/large-applications.html)
 	    - [Secure applications](https://qld-gov-au.github.io/swe_template/secure-applications.html)
 - Other templates
-	- [Content guide](https://qld-gov-au.github.io/swe_template/content-guide.html)
-	- [Content form](https://qld-gov-au.github.io/swe_template/content-form.html)
-	- [Content form complex](https://qld-gov-au.github.io/swe_template/content-form-complex.html)
-	- [Search results](https://qld-gov-au.github.io/swe_template/search-results.html)
-	- [Javascript not enabled](https://qld-gov-au.github.io/swe_template/no-js-example.html)
+	- [Content guide](https://qld-gov-au.github.io/swe_template/pagemodels/content-guide.html)
+	- [Content form](https://qld-gov-au.github.io/swe_template/pagemodels/content-form.html)
+	- [Content form complex](https://qld-gov-au.github.io/swe_template/pagemodels/content-form-complex.html)
+	- [Search results](https://qld-gov-au.github.io/swe_template/pagemodels/search-results.html)
+	- [Javascript not enabled](https://qld-gov-au.github.io/swe_template/pagemodels/no-js-example.html)
 
 - [SWE 3 Page models and templates](https://qld-gov-au.github.io/web-template-release/index.html)
 
