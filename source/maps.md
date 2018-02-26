@@ -64,7 +64,7 @@ Following table describes the SSI/ HTML element configuration
 	<tbody>
 	<tr>
 		<td >Map</td>
-		<td ><pre>&lt;!--#include virtual="/assets/includes/dynamic/map/map-template.html"--&gt; </pre></td>
+		<td ><pre>&lt;!--#include virtual="/assets/includes/dynamic/maps/map-template.html"--&gt; </pre></td>
 		<td >
 			<p>Wherever this include is on the page, Map canvas will be generated</p>
 			<p>This include has class="qgov-maps" which is key to run scripts</p>
@@ -73,7 +73,7 @@ Following table describes the SSI/ HTML element configuration
 	<tr>
 		<td >Form</td>
 		<td >
-			<p><strong>Default Template</strong>:<pre> &lt;!--#include virtual="/assets/includes/dynamic/map/search-form.html"--&gt;</pre></p>
+			<p><strong>Default Template</strong>:<pre> &lt;!--#include virtual="/assets/includes/dynamic/maps/search-form.html"--&gt;</pre></p>
 			<p><strong>Custom Template: </strong>Any custom form</p>
 		</td>
 		<td >
@@ -89,7 +89,7 @@ Following table describes the SSI/ HTML element configuration
 	<tr>
 		<td >Search results</td>
 		<td>
-			<p><strong>Default Template</strong>: <pre>&lt;!--#include virtual="/assets/includes/dynamic/map/search-result.html"--&gt;</pre></p>
+			<p><strong>Default Template</strong>: <pre>&lt;!--#include virtual="/assets/includes/dynamic/maps/search-result.html"--&gt;</pre></p>
 			<p><strong>Custom Template: </strong></p>
 			<pre>
 &lt;div id="search-results-container"&gt;
@@ -242,7 +242,7 @@ data-title-column |	mandatory | | |Column name in which application should look 
 data-set |	optional | qgap, housing-service-centres, scd | |
 
 You can also include following pre-defined templates
-- /assets/includes/dynamic/map/view-closure.html
-- /assets/includes/dynamic/map/view-contact-info.html
-- /assets/includes/dynamic/map/view-opening-hours.html
-- /assets/includes/dynamic/map/view-static-map.html
+- /assets/includes/dynamic/maps/view-closure.html
+- /assets/includes/dynamic/maps/view-contact-info.html
+- /assets/includes/dynamic/maps/view-opening-hours.html
+- /assets/includes/dynamic/maps/view-static-map.html
