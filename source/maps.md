@@ -64,7 +64,7 @@ Following table describes the SSI/ HTML element configuration
 	<tbody>
 	<tr>
 		<td >Map</td>
-		<td ><pre>&lt;!--#include virtual="/assets/includes/dynamic/map/map-template.html"--&gt; </pre></td>
+		<td ><pre>&lt;!--#include virtual="/assets/includes/dynamic/maps/map-template.html"--&gt; </pre></td>
 		<td >
 			<p>Wherever this include is on the page, Map canvas will be generated</p>
 			<p>This include has class="qgov-maps" which is key to run scripts</p>
@@ -73,7 +73,7 @@ Following table describes the SSI/ HTML element configuration
 	<tr>
 		<td >Form</td>
 		<td >
-			<p><strong>Default Template</strong>:<pre> &lt;!--#include virtual="/assets/includes/dynamic/map/search-form.html"--&gt;</pre></p>
+			<p><strong>Default Template</strong>:<pre> &lt;!--#include virtual="/assets/includes/dynamic/maps/search-form.html"--&gt;</pre></p>
 			<p><strong>Custom Template: </strong>Any custom form</p>
 		</td>
 		<td >
@@ -89,7 +89,7 @@ Following table describes the SSI/ HTML element configuration
 	<tr>
 		<td >Search results</td>
 		<td>
-			<p><strong>Default Template</strong>: <pre>&lt;!--#include virtual="/assets/includes/dynamic/map/search-result.html"--&gt;</pre></p>
+			<p><strong>Default Template</strong>: <pre>&lt;!--#include virtual="/assets/includes/dynamic/maps/search-result.html"--&gt;</pre></p>
 			<p><strong>Custom Template: </strong></p>
 			<pre>
 &lt;div id="search-results-container"&gt;
@@ -139,9 +139,9 @@ data-location |	optional |	string (example : " , QLD")	| |in location input fiel
 data-orderby | optional | string (example: "Title") |   | search results will be displayed ordered by data-orderby value.<br>This value should be column name in data
 
 You can also include following pre-defined templates
- - /assets/includes/dynamic/map/search-result.html
- - /assets/includes/dynamic/map/search-result-qgap.html
- - /assets/includes/dynamic/map/search-result-housing-service-centres.html
+ - /assets/includes/dynamic/maps/search-result.html
+ - /assets/includes/dynamic/maps/search-result-qgap.html
+ - /assets/includes/dynamic/maps/search-result-housing-service-centres.html
 
 ### User guide on data format in CSV files
 **Notes on operating hours for counters like QGAP, Housing centers etc**
