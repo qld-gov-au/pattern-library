@@ -242,7 +242,7 @@ data-title-column |	mandatory | | |Column name in which application should look 
 data-set |	optional | qgap, housing-service-centres, scd | |
 
 You can also include following pre-defined templates
-- /assets/includes/dynamic/map/view-closure.html
-- /assets/includes/dynamic/map/view-contact-info.html
-- /assets/includes/dynamic/map/view-opening-hours.html
+- /assets/includes/dynamic/maps/view-closure.html
+- /assets/includes/dynamic/maps/view-contact-info.html
+- /assets/includes/dynamic/maps/view-opening-hours.html
 - /assets/includes/dynamic/maps/view-static-map.html
