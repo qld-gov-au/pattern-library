@@ -245,4 +245,4 @@ You can also include following pre-defined templates
 - /assets/includes/dynamic/map/view-closure.html
 - /assets/includes/dynamic/map/view-contact-info.html
 - /assets/includes/dynamic/map/view-opening-hours.html
-- /assets/includes/dynamic/map/view-static-map.html
+- /assets/includes/dynamic/maps/view-static-map.html
