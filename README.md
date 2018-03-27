@@ -110,7 +110,7 @@ The SWE has two flavours.
 - [App links](https://github.com/qld-gov-au/pattern-library/blob/master/source/content-types/mobile-applications/mobile-applications.md)
 - [Print](https://github.com/qld-gov-au/pattern-library/blob/master/source/disable-print.md)
 - ~~[Web applications](https://github.com/qld-gov-au/pattern-library/blob/master/source/content-types/web-applications/web-applications.md)~~ :thinking: (already linked, should probably move to all this content in to Forms, under validationa lerts or something)
-- [Content types](https://github.com/qld-gov-au/pattern-library/blob/master/source/content-types/content-types.md) :thinking: (umm what?)
+- [Content types](https://github.com/qld-gov-au/pattern-library/blob/master/source/content-types/content-types.md) :thinking: 
 
 - [disaster-alert-aside.md](https://github.com/qld-gov-au/pattern-library/blob/master/source/disaster-alert-aside.md)
 - [errors.md](https://github.com/qld-gov-au/pattern-library/blob/master/source/errors.md)
