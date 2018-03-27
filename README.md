@@ -16,8 +16,11 @@ The SWE has two flavours.
 
 ## Quick links
 
-- [Single Website Experience (SWE) templates](https://qld-gov-au.github.io/swe_template/)
+- [SWE 2 Page models and templates](https://qld-gov-au.github.io/swe_template/)
+- [SWE 3 Page models and templates](https://qld-gov-au.github.io/web-template-release/index.html)
 - [Consistent User Experinece (CUE) standard](https://www.forgov.qld.gov.au/cue)
+- [Websites policy (IS26)](https://www.qgcio.qld.gov.au/documents/websites-policy-is26)
+- [Web Content Accessibility Guidelines 2.0](https://www.w3.org/TR/WCAG20/)
 
 ## Pattern library
 
@@ -120,11 +123,6 @@ The SWE has two flavours.
 - [print-remote-pages.md](https://github.com/qld-gov-au/pattern-library/blob/master/source/print-remote-pages.md):thinking:(combine with print)
 - [quick-exit.md](https://github.com/qld-gov-au/pattern-library/blob/master/source/quick-exit.md)
 - [video-pattern.md](https://github.com/qld-gov-au/pattern-library/blob/master/source/video-pattern.md):thinking::skull: 3 years old!
-
-## SWE Page models and templates
-
-- [SWE 2 Page models and templates](https://qld-gov-au.github.io/swe_template/)
-- [SWE 3 Page models and templates](https://qld-gov-au.github.io/web-template-release/index.html)
 
 ## Related
 
