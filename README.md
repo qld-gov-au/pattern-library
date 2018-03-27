@@ -12,7 +12,7 @@ The SWE has two flavours.
 	- SWE 3 is used for all new websites
 	- **SWE 3 replaces SWE 2**
 	- SWE 3's appearance laregly reflects SWE 2
-	- SWE 3 is not feature complete, required components will be ported as necessary.
+	- SWE 3 is not feature complete, required components will be ported as necessary
 
 ## Quick links
 
