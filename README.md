@@ -1,7 +1,5 @@
 # Single Website Experience (SWE) Pattern Library
 
-**Great State. Great Patterns.**
-
 The **Single Website Experience (SWE)** is a frontend framework used for www.qld.gov.au 
 
 The SWE has two flavours. 
