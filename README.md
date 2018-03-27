@@ -173,9 +173,9 @@ The SWE has two flavours.
 
 - [Web Content Accessibility Guidelines 2.0](https://www.w3.org/TR/WCAG20/)
 
-IS26's Policy requirement 1 states that Queensland Government websites must:
+As per [IS26's Policy requirement 1](https://www.qgcio.qld.gov.au/documents/websites-policy-is26), Queensland Government websites must meet AA level conformance:
 
-> have AA level conformance with the World Wide Web Consortium (W3C) [Web Content Accessibility Guidelines 2.0](https://www.w3.org/TR/WCAG20/)
+> have AA level conformance with the World Wide Web Consortium (W3C) Web Content Accessibility Guidelines 2.0
 
 ### Naming conventions and categories in the Pattern libarary
 
