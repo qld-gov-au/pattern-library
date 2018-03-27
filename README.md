@@ -124,24 +124,6 @@ The SWE has two flavours.
 ## SWE Page models and templates
 
 - [SWE 2 Page models and templates](https://qld-gov-au.github.io/swe_template/)
-	- Index page models
-	    - [Franchise index with asides](https://qld-gov-au.github.io/swe_template/franchise-index-with-asides.html)
-	    - [Advanced franchise index](https://qld-gov-au.github.io/swe_template/advanced-franchise-index.html)
-	    - [Theme index with asides](https://qld-gov-au.github.io/swe_template/theme-index-with-asides.html)
-	    - [Aggregation](https://qld-gov-au.github.io/swe_template/aggregation.html)
-	- Content page models
-	    - [Content default](https://qld-gov-au.github.io/swe_template/content-default.html)
-	    - [Content case study](https://qld-gov-au.github.io/swe_template/content-case-study.html)
-	- Application page models
-	    - [Large applications](https://qld-gov-au.github.io/swe_template/large-applications.html)
-	    - [Secure applications](https://qld-gov-au.github.io/swe_template/secure-applications.html)
-- Other templates
-	- [Content guide](https://qld-gov-au.github.io/swe_template/pagemodels/content-guide.html)
-	- [Content form](https://qld-gov-au.github.io/swe_template/pagemodels/content-form.html)
-	- [Content form complex](https://qld-gov-au.github.io/swe_template/pagemodels/content-form-complex.html)
-	- [Search results](https://qld-gov-au.github.io/swe_template/pagemodels/search-results.html)
-	- [Javascript not enabled](https://qld-gov-au.github.io/swe_template/pagemodels/no-js-example.html)
-
 - [SWE 3 Page models and templates](https://qld-gov-au.github.io/web-template-release/index.html)
 
 ## Related
