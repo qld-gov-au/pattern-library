@@ -169,15 +169,13 @@ The SWE has two flavours.
 
 ### Web Content Accessibility Guidelines 2.0 (WCAG 2.0)
 
-IS26's Policy requirement 1 states that Queensland Government websites must:
-
-> have AA level conformance with the World Wide Web Consortium (W3C) [Web Content Accessibility Guidelines 2.0](https://www.w3.org/TR/WCAG20/)
-
 > Web Content Accessibility Guidelines (WCAG) 2.0 covers a wide range of recommendations for making Web content more accessible. Following these guidelines will make content accessible to a wider range of people with disabilities, including blindness and low vision, deafness and hearing loss, learning disabilities, cognitive limitations, limited movement, speech disabilities, photosensitivity and combinations of these. Following these guidelines will also often make your Web content more usable to users in general.
-
 
 - [Web Content Accessibility Guidelines 2.0](https://www.w3.org/TR/WCAG20/)
 
+IS26's Policy requirement 1 states that Queensland Government websites must:
+
+> have AA level conformance with the World Wide Web Consortium (W3C) [Web Content Accessibility Guidelines 2.0](https://www.w3.org/TR/WCAG20/)
 
 ### Naming conventions and categories in the Pattern libarary
 
