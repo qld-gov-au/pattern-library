@@ -11,7 +11,8 @@ The SWE has two flavours.
 - **SWE 3** is a rapid protoyping framework, built on bootstrap 3
 	- SWE 3 is used for all new websites
 	- **SWE 3 replaces SWE 2**
-	- SWE 3's appearance and functionality reflects SWE 2
+	- SWE 3's appearance laregly reflects SWE 2
+	- SWE 3 is not feature complete but will port any SWE 2 functionality when required.
 
 ## Quick links
 
@@ -165,6 +166,21 @@ The SWE has two flavours.
 > This Queensland Government Enterprise Architecture (QGEA) policy states the minimum requirements for Queensland Government agencies in the creation, implementation and management of websites.
 
 - [Websites policy (IS26)](https://www.qgcio.qld.gov.au/documents/websites-policy-is26)
+
+IS26's Policy requirement 1 states that Queensland Government websites must:
+
+> have AA level conformance with the World Wide Web Consortium (W3C) [Web Content Accessibility Guidelines 2.0](https://www.w3.org/TR/WCAG20/)
+
+### WCAG
+
+> Web Content Accessibility Guidelines (WCAG) 2.0 covers a wide range of recommendations for making Web content more accessible. Following these guidelines will make content accessible to a wider range of people with disabilities, including blindness and low vision, deafness and hearing loss, learning disabilities, cognitive limitations, limited movement, speech disabilities, photosensitivity and combinations of these. Following these guidelines will also often make your Web content more usable to users in general.
+>
+> WCAG 2.0 success criteria are written as testable statements that are not technology-specific. Guidance about satisfying the success criteria in specific technologies, as well as general information about interpreting the success criteria, is provided in separate documents. See Web Content Accessibility Guidelines (WCAG) Overview for an introduction and links to WCAG technical and educational material.
+
+
+
+- [Web Content Accessibility Guidelines 2.0](https://www.w3.org/TR/WCAG20/)
+
 
 ### Naming conventions and categories in the Pattern libarary
 
