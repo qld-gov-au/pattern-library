@@ -139,9 +139,9 @@ data-location |	optional |	string (example : " , QLD")	| |in location input fiel
 data-orderby | optional | string (example: "Title") |   | search results will be displayed ordered by data-orderby value.<br>This value should be column name in data
 
 You can also include following pre-defined templates
- - /assets/includes/dynamic/map/search-result.html
- - /assets/includes/dynamic/map/search-result-qgap.html
- - /assets/includes/dynamic/map/search-result-housing-service-centres.html
+ - /assets/includes/dynamic/maps/search-result.html
+ - /assets/includes/dynamic/maps/search-result-qgap.html
+ - /assets/includes/dynamic/maps/search-result-housing-service-centres.html
 
 ### User guide on data format in CSV files
 **Notes on operating hours for counters like QGAP, Housing centers etc**
