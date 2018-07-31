@@ -16,9 +16,9 @@ The SWE has two flavours.
 
 ## Quick links
 
+- [SWE Resources (including SWE Product Definition document)](https://github.com/qld-gov-au/swe)
 - [SWE 2 Page models and templates](https://qld-gov-au.github.io/swe_template/)
 - [SWE 3 Page models and templates](https://qld-gov-au.github.io/web-template-release/index.html)
-- [SWE Resources (including SWE Product Definition document)](https://github.com/qld-gov-au/swe)
 - [Consistent User Experinece (CUE) standard](https://www.forgov.qld.gov.au/cue)
 - [Websites policy (IS26)](https://www.qgcio.qld.gov.au/documents/websites-policy-is26)
 - [Web Content Accessibility Guidelines 2.0](https://www.w3.org/TR/WCAG20/)
