@@ -25,7 +25,7 @@ The SWE has two flavours.
 
 ## Pattern library
 
-**SWE 2 will be deprecated June 30, 2019. Please refer to [SWE 3 Page models and templates](https://qld-gov-au.github.io/web-template-release/index.html) for the SWE3 Pattern Library.**
+**This SWE 2 Pattern Library will be deprecated June 30, 2019. Please refer to [SWE 3 Page models and templates](https://qld-gov-au.github.io/web-template-release/index.html) for the SWE3 Pattern Library.**
 
 - [Content types](https://github.com/qld-gov-au/pattern-library/blob/master/source/content-types/content-patterns/content-patterns.md)
 	- [Figures (images, diagrams, captions)](https://github.com/qld-gov-au/pattern-library/blob/master/source/content-types/content-patterns/content-patterns.md#figures-images-diagrams-captions)
