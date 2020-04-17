@@ -2,12 +2,6 @@
 
 The **Single Website Experience (SWE)** is a frontend framework used for www.qld.gov.au 
 
-The SWE has two flavours. 
-
-- **SWE 2** is a frontend framework used for www.qld.gov.au
-	- SWE 2 is **no longer supported**
-	- SWE 2 will have no further bug fixes or enhancements. SWE2 assets will remain available for existing websites while agencies transition to SWE3.
-	
 - **SWE 3** is a rapid protoyping framework, built on bootstrap 3
 	- SWE 3 is used for all new websites
 	- **SWE 3 replaces SWE 2**
@@ -17,7 +11,6 @@ The SWE has two flavours.
 ## Quick links
 
 - [SWE resources (including SWE Product Definition document)](https://github.com/qld-gov-au/swe)
-- [SWE 2 Page models and templates](https://qld-gov-au.github.io/swe_template/)
 - [SWE 3 Page models and templates](https://qld-gov-au.github.io/web-template-release/index.html)
 - [Consistent User Experinece (CUE) standard](https://www.forgov.qld.gov.au/cue)
 - [Websites policy (IS26)](https://www.qgcio.qld.gov.au/documents/websites-policy-is26)
@@ -25,7 +18,7 @@ The SWE has two flavours.
 
 ## Pattern library
 
-**This SWE 2 Pattern Library will be deprecated June 30, 2019. Please refer to [SWE 3 Page models and templates](https://qld-gov-au.github.io/web-template-release/index.html) for the SWE3 Pattern Library.**
+**This SWE 2 Pattern Library is now deprecated since June 30, 2019. Please refer to [SWE 3 Page models and templates](https://qld-gov-au.github.io/web-template-release/index.html) for the SWE3 Pattern Library.**
 
 - [Content types](https://github.com/qld-gov-au/pattern-library/blob/master/source/content-types/content-patterns/content-patterns.md)
 	- [Figures (images, diagrams, captions)](https://github.com/qld-gov-au/pattern-library/blob/master/source/content-types/content-patterns/content-patterns.md#figures-images-diagrams-captions)
