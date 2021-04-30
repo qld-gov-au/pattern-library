@@ -1,558 +1,248 @@
 # Maps
+## Summary
+When user wants to display map and search results in their page but do not want to develop from scratch, QLD SWE assets provides a plugin which can be used to build map and display search results dynamically. 
+User can use default map or can configure via SSI includes and data attributes which suits their requirement.
+ 
+This document describes how user can use the plugin to display maps and search results in their page
 
-Three patterns are available for publishing mapping pages.
+## Key requirements
+User would need 
+- Data in CSV file uploaded in [Data Portal](https://data.qld.gov.au/)
+- A folder structure as shown in the image below
+  - map/index.html → would contain code to display map and search results. It can also contain form if end-user needs to filter data
+  - map/view/index.html → would contain code to view complete details of one search result
+  ![folder structure](images/folder-structure.png)
 
-Map pattern | Page model | Description
------------ | ---------- | -----------
-MAM (Medium awesome maps) | Content page | A content page which features a search and details view, including a map, for location-based content.
-MAM angular | Content page | *Currently in development.* MAM rebuilt as an angular app for enhanced functionality (e.g. richer templates). https://github.com/qld-gov-au/qgov-mam-angularjs
-BAM (Big awesome maps) | Large application page | A page with includes a map as the primary interaction method (the map will fill all columns on page load).
-PAM (PHP awesome maps) | Content page | An older implementation available only on www.qld.gov.au. We recommend you use MAM. See: [Counters from CSV datasets](https://github.com/qld-gov-au/pattern-library/blob/master/source/counters-from-csv-datasets.md)
-
-**See it in action**
-- [Science capability directory](http://www.qld.gov.au/dsitia/about-us/business-areas/innovation-science-dev/science-directory/)
-- [Prison locations](http://www.qld.gov.au/law/sentencing-prisons-and-probation/prisons-and-detention-centres/prison-locations/)
-- [All Abilities Playgrounds](http://www.qld.gov.au/disability/children-young-people/playgrounds-profiles/)
-- [Support for victims of crime](http://www.qld.gov.au/law/crime-and-police/victims-and-witnesses-of-crime/support-for-victims-of-crime/find-a-support-service/)
-- [Housing service centres](http://www.qld.gov.au/housing/public-community-housing/housing-service-centre/) (PAM)
-
-## Requirements
-- dataset hosted on data.qld.gov.au
-- dataset must contain Latitude and Longitude data columns
-- dataset API must be available (CSV format is recommended)
-- You will require a backend to make content accessible to search engines (PHP is used on www.qld.gov.au)
-
-The sample code on this page uses the [Queensland Public Libraries](https://data.qld.gov.au/dataset/public-libraries/resource/7c68ac60-cbb4-4450-89fb-89d917ae3b34) dataset.
-
-### Usage
-Use the sample content code (at end of page) and customise these templates. Replace the variable names (between brackets) with column headings from your dataset. The code below uses data from the 'Library Name' column for the search result title.
-#### Search result
-```html
-<h3><a href="?title={{Library Name}}">{{Library Name}}</a></h3>
-<p class="search-description">{{Address Line 1}}</p>
-<p class="meta">{{Locality}}</p>
+## Usage
+### How to display Map & Search results
+Include following code in your map/index.html. Make sure the text within the curly braces match the column names in your csv data.
 ```
-
-Include the dataset link (the resource ID is particularly important):
-#### Dataset link
-```html
-<div id="dataset">
-    <a href="https://data.qld.gov.au/dataset/public-libraries/resource/7c68ac60-cbb4-4450-89fb-89d917ae3b34">View the data</a>
-</div>
-```
-
-Edit the info panel template to display detailed information for each row of data.
-#### Info panel template
-```html
-<div id="app-viewport-info">
-    <h2>{{Library Name}}</h2>
-    <div id="description">
-        <p>{{Address Line 1}}<br />
-        {{Address Line 2}}</p>
-        <p>{{Locality}} {{Postcode}}</p>
-    </div>
-</div>
-```
-Test your page and publish!
-
-## Add SEO fallbacks
-
-Above the data set link, insert this line of code. There are a number of default settings that can be over-ridden by using key value pairs in the query string.
-These are:
-- resource (the open data resource ID)
-- scope (the default column in the dataset to use for linking to each data entry)
-- searchby (the key used in the Javascript to query the data set)
-- view (the custom view for the data set—use this only after consultation with the UI team at Smart Service or errors may occur)
-
-#### Open data include
-```html
-<!--#include virtual="/assets/includes/dynamic/opendata/index.php?${QUERY_STRING}&resource=96d6b499-e402-409c-9c91-e8c02f2801c8&scope=Name&searchby=title" -->
-```
-
-You must add this meta tag to the page head. It tells search engine bots that the page content is generated by script and to request the content in a special URL.
-
-DO NOT use this meta tag on other page models (doing so will result in your content being removed from the search engine).
-```html
-<meta name="fragment" content="!" />
-```
-
-## How it works
-- The SWE template will detect this pattern and load the supporting scripts to create the map
-- Data will be downloaded from data.qld.gov.au
-- All data will be displayed in the initial state
-- The search box will be visible, but the left (search) and right (info) panels will be hidden
-- Users can interact with the search, map markers or info panel
-
-## Features
-- Supports markdown for structuring content
-- History support (the back button works)
-- Supports large datasets with efficient clustering of nearby markers (uses leaflet map APIs and plugins)
-- Simple implementation (approx time to create and customise a new page: 15–60 minutes. Your first one will take longer while you wrangle with the templates.)
-
-Please note this pattern has limited support for users without javascript.
-
-## Customising the user interface
-- Customising the search form, including adding custom filters
-- Creating a custom legend that filters what is visible on the map
-- Linking to an external page from the info panel
-- To sort the search results, sort your CSV data file. The order of rows will be preserved (except when the customer searches by location).
-
-### Customising the templates
-The templates uses HTML with placeholders marking where you want CSV data to be included. A couple of formatting helps are available to format data to match the editorial style.
-
-#### Sample CSV data
-Title | Number | Date | Time | Date and time | Large number | Lorem | Markdown | Lists
------ | ------ | ---- | ---- | ------------- | ------------ | ----- | -------- | -----
-Sample data | 123 | 2014-07-30 | 9:40 | 2011-01-04 15:07:23 | 7589215 | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, soluta? | Text with \*emphasis\* | one; two; three
-
-#### Formatting support
-Format | Example output | Description
------- | -------------- | -----------
-`{{Title}}` | Sample data | Displays the exact value from the CSV
-`{{Large number}}` | 7589215 | Displays the exact value.
-`{{shortnum:Large number}}` | 7.6 million | Rounds off to millions (one decimal place)
-`{{$:Large number|abbr}}` | `<abbr title="$7,589,215">$7.6 million</abbr>` | Uses HTML abbreviation
-`{{$:Large number|abbr:both}}` | $7.6 million ($7,589,215) | Display abbreviated and exact number
-`{{date:Date}}` | 4 January 2011 | Date formatting
-`{{datetime:Date and time}}` | 4 January 2011, 3.07pm | Date and time formatting
-`{{time:Time}}` | 9.40am | Time formatting
-`{{tex:Lorem|words:5}}` | Lorem ipsum dolor sit amet,… | Display only *n* words. (Useful for search result descriptions.)
-`{{md:Markdown}}` | Text with `<em>emphasis</em>` | Treats the data as markdown and generates HTML
-`{{Markdown}}` | Text with \*emphasis\* | The exact value (includes the markdown syntax)
-`{{text:Markdown}}` | Text with emphasis | Strips markdown formatting
-`{{compare:columnA|columnB}}` | - | Uses the advantages/disadvantages pattern. Both columns are processed as markdown.
-`{{list:List}}` | `<ul><li>one</li><li>two</li><li>three</li></ul>` | Treats the data as a list separated by semicolons and generates bullet points.
-`{{list:Title}}` | Sample data | No list generated when data does not contain any semicolons.
-`{{info:Lorem}}` | - | Uses the info status pattern with the lorem data as the contents and a default heading of 'Information'
-`{{info:Lorem|Title}}` | - | Uses the info status pattern with the lorem data as the contents and the heading found from the title column: 'Sample data'
-`{{info:Lorem|'My custom heading'}}` | - | Uses the info status pattern with the lorem data as the contents and a custom heading: My custom heading
-`{{warn:Lorem|Title}}` | - | As above, but generates a warning status box (different icon and colour)
-`{{streetAddress:Line1|Line2|Suburb|State|Postcode}}` | - | Uses the street address pattern with the 5 fields of address data.
-`{{streetAddress:Line|Suburb|State|Postcode}}` | - | Uses the street address pattern with the 5 fields of address data (showing optional line 2 parameter)
-`{{streetAddress:Line1|Line2|Suburb|'QLD'|Postcode}}` | - | Uses the street address pattern with the 5 fields of address data (showing hardcoded 'QLD' for State).
-
-### Customising the search form
-The search offers a couple of built in fields which you may use. It is up to you which fields you include on your MAM page. The code listing below shows all.
-- query: a keyword search across all columns in your CSV dataset. Uses SQL 'LIKE' matching.
-- location: performs a geocode lookup on the text entered to find the latitude and longitude—returns the rows nearest to the specified location (and sorts by distance).
-- distance: used in conjunction with location to set a search radius. The default is 1000km.
-- custom fields: you may search specific values by using select controls (drop down lists).
-
-### Add custom filters to the search form
-You can filter the results displayed on the map using any columns from your dataset. The name-value pairs in your form fields must match the column heading and data as it appears in your dataset. We recommend using a select control for each filter. The code below demonstrates a filter allowing the user to select a 'Sector':
-
-#### Custom search (Science Capability Directory)
-```html
-<form id="app-viewport-tools-search">
-    <ol class="questions">
-        <li class="viewport search">
-            <label for="query">Keywords</label>
-            <input type="search" name="query" id="query" size="25" value="" placeholder="Enter search term" />
-        </li>
-        <li>
-            <label for="location">
-                <span class="label">Location or postcode</span>
-            </label>
-            <input type="search" name="location" id="location" size="30" value="" />
-        </li>
-        <li>
-            <label for="distance">
-                <span class="label">Radius</span>
-            </label>
-            <select name="distance" id="distance">
-                <option value="1000">1000km</option>
-                <option value="50">50km</option>
-            </select>
-        </li>
-        <li>
-            <fieldset>
-                <legend>Filter results by</legend>
-                <ol class="questions">
-                    <li>
-                        <label for="sector">
-                            <span class="label">Sector</span>
-                        </label>
-                        <select id="sector" name="Sector">
-                            <option value="">All</option>
-                            <option value="Biotechnology">Biotechnology</option>
-                            <option value="Construction">Construction</option>
-                            <option value="Defence, aviation and space">Defence, aviation and space</option>
-                            <option value="Environment and nature">Environment and nature</option>
-                            <option value="Food and agriculture">Food and agriculture</option>
-                            <option value="Health and medical">Health and medical</option>
-                            <option value="ICT and multimedia">ICT and multimedia</option>
-                            <option value="Manufacturing and design">Manufacturing and design</option>
-                            <option value="Mining/resources and energy">Mining/resources and energy</option>
-                            <option value="Tourism">Tourism</option>
-                        </select>
-                    </li>
-                </ol>
-            </fieldset>
-        </li>
-        <li class="footer">
-            <ul class="actions">
-                <li>
-                    <strong>
-                        <input type="submit" value="Search" />
-                    </strong>
-                </li>
-                <li>
-                    <a href="#app-viewport" class="all">Show all results</a>
-                </li>
-            </ul>
-        </li>
-    </ol>
+<!--#include virtual="/assets/includes/dynamic/maps/map-template.html"-->
+<form action="" method="get">
+  <ol class="questions">
+     <li>
+        <label for="location">
+           <span class="label">Suburb or postcode</span>
+        </label>
+        <input type="text" id="location" name="location" size="30" value="" />
+        <em><input type="submit" value="Search" /></em>
+     </li>
+  </ol>
 </form>
-```
-
-### Add an image gallery to the page
-Image galleries are supported, with some limitations.
-
-You must:
-- publish the images in a known location
-- use the same number of images on each page
-- have 2 columns for every image in your CSV file:
-  	1. image URL (e.g. Image1_src, Image2_src). We recommend using a full protocol-relative URL so third-party developers can use the data. e.g. `//www.qld.gov.au/franchise/assets/images/filename.jpg`
-    2. alt text (e.g. Image1_description, Image2_description, …)
-- add a script snippet to the view template to initialise the image gallery
-
-The sample code below is from the [All Abilities Playgrounds](http://www.qld.gov.au/disability/children-young-people/playgrounds-profiles/index.html?title=Anzac%20Park%20All%20Abilities%20Playground). The CSV data contains 4 images for each playground named: 'Image 1' to 'Image 4' for the URLs and 'Image 1 description' to 'Image 4 description' for the alt text.
-#### Sample image gallery view template
-```html
-<div id="view" class="visuallyhidden">
-    <div id="app-viewport-info">
-        <a name="top"></a>
-        <h2>{{Name}}</h2>
-        <dl class="grid">
-            <dt>Facilities:</dt>
-            <dd>{{md:Facilities}}</dd>
-            <dt>Playground features:</dt>
-            <dd>{{md:Playground features}}</dd>
-            <dt>Website:</dt>
-            <dd><a href="{{Weblink}}">{{Weblink}}</a></dd>
-            <dt>Contact:</dt>
-            <dd>{{Contact}}</dd>
-            <dt>Address:</dt>
-            <dd>
-                {{streetAddress:Address1|Address2|Suburb|'Qld'|Postcode}}
-            </dd>
-        </dl>
-        <div id="gallery" class="section image-gallery">
-            <ul>
-                <li><a href="{{Image 1}}.jpg" title="{{Image 1 description}}"><img src="{{Image 1}}.jpg" alt="{{Image 1 description}}"/></a></li>
-                <li><a href="{{Image 2}}.jpg" title="{{Image 2 description}}"><img src="{{Image 2}}.jpg" alt="{{Image 2 description}}"/></a></li>
-                <li><a href="{{Image 3}}.jpg" title="{{Image 3 description}}"><img src="{{Image 3}}.jpg" alt="{{Image 3 description}}"/></a></li>
-                <li><a href="{{Image 4}}.jpg" title="{{Image 4 description}}"><img src="{{Image 4}}.jpg" alt="{{Image 4 description}}"/></a></li>
-            </ul>
-        </div>
-        <script>
-        $( 'a', '.image-gallery' ).butterfly({
-            closeButton: true,
-            closeButtonCorner: 'tr',
-            galleryContainers: '.image-gallery',
-            closeButtonImage: qg.swe.paths.assets + 'images/skin/button-close.png'
-        });
-        </script>
-    </div>
+<a id="data-url" data-zoom="5" data-center="-20,146" data-set="" data-controlsposition="TOP_RIGHT" data-clustergridsize="30" data-url="https://data.qld.gov.au/dataset/q-ride-providers/resource/0647759d-9f68-44f9-bd7e-eb96d37d11e4" data-strictbounds="true" data-location=" , QLD" data-orderby="Title">View full Data</a>
+<div id="search-results-container">
+    <h2 class="resultset-title"></h2>
+        <ol id="search-results">
+            <li>
+                [[<h3><a href="view/?title={{Title}}"><u>{{Title}}</u></a></h3>]]
+                [[{{streetAddress:Address 1|Address 2|Suburb|Postcode}}]]
+                [[<br />{{Phone}}]]
+                [[<br />{{md:Website}}]]
+                <hr/> 
+            </li>
+        </ol>
+    <div class="pagination"></div>
 </div>
+ 
+ 
+<!--Additional comments explaining template
+//<div id="search-results-container">,<h2 class="resultset-title"></h2>,<ol id="search-results">,<div class="pagination"></div> are important to run the script
+//Square brackets implies, display content enclosed in square brackets only if content enclosed in curly brackets exists
+//Curly brackets would be the column names of your csv file. -->
+```
+####  How to customise via SSI includes or data-attributes
+Following table describes the SSI/ HTML element configuration
+
+<table>
+	<thead>
+	<tr>
+		<th>Display</th>
+		<th >Include/ HTML Element</th>
+		<th>What it does</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td >Map</td>
+		<td ><pre>&lt;!--#include virtual="/assets/includes/dynamic/maps/map-template.html"--&gt; </pre></td>
+		<td >
+			<p>Wherever this include is on the page, Map canvas will be generated</p>
+			<p>This include has class="qgov-maps" which is key to run scripts</p>
+		</td>
+	</tr>
+	<tr>
+		<td >Form</td>
+		<td >
+			<p><strong>Default Template</strong>:<pre> &lt;!--#include virtual="/assets/includes/dynamic/maps/search-form.html"--&gt;</pre></p>
+			<p><strong>Custom Template: </strong>Any custom form</p>
+		</td>
+		<td >
+			<p>After form submit, the data is filtered based on the values entered in form.</p>
+			<p>"name" attribute of the form fields should match column name in data.</p>
+		</td>
+	</tr>
+	<tr>
+		<td >Data Element</td>
+		<td ><pre>&lt;a id="data-url" data-zoom="5" data-center="-20,146" data-set="" data-controlsposition="TOP_RIGHT" data-clustergridsize="30" <br>data-url="https://staging.data.qld.gov.au/dataset/test-mapping/resource/4fb8135b-ae12-4e95-9d29-e59e9c31fe72" data-strictbounds="true"&gt;View full Data&lt;/a&gt;</pre></td>
+		<td >Data from the mentioned data-url will be fetched and displayed in the search results. More information on its configuration is given in the table below.</td>
+	</tr>
+	<tr>
+		<td >Search results</td>
+		<td>
+			<p><strong>Default Template</strong>: <pre>&lt;!--#include virtual="/assets/includes/dynamic/maps/search-result.html"--&gt;</pre></p>
+			<p><strong>Custom Template: </strong></p>
+			<pre>
+&lt;div id="search-results-container"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2 class="resultset-title"&gt;&lt;/h2&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;ol id="search-results"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[[&lt;h3&gt;&lt;a href="view/?title={{Title}}"&gt;&lt;u&gt;{{Title}}&lt;/u&gt;&lt;/a&gt;&lt;/h3&gt;]]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[[{{streetAddress:Address 1|Address 2|Suburb|State|Postcode}}]]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[[&lt;br /&gt;{{Phone}}]]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[[&lt;br /&gt;{{Mobile1}}]]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[[&lt;br /&gt;{{Mobile2}}]]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[[&lt;br /&gt;{{md:Website}}]]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[[&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;Area serviced:&lt;/strong&gt;&amp;nbsp;{{Area serviced}}&lt;br /&gt;]]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;hr/&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ol&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="pagination"&gt;&lt;/div&gt;
+&lt;/div&gt;
+			</pre>
+			<p><strong>Custom Template via data attribute: </strong></p>
+            <p>The above custom template can also be saved as a separate html file and can be used by attaching its relative path to the Data Element.</p>
+            <pre>&lt;a id="data-url" data-search-template="{RELATIVE-PATH}" data-zoom="5" data-center="-20,146" data-set="" data-controlsposition="TOP_RIGHT" 
+data-clustergridsize="30" data-url="https://staging.data.qld.gov.au/dataset/test-mapping/resource/4fb8135b-ae12-4e95-9d29-e59e9c31fe72" 
+data-strictbounds="true"&gt;View full Data&lt;/a&gt;</pre>
+		</td>
+		<td>
+			<p>Data will be processed and displayed in the format described in the template.</p>
+			<p>Value inside curly braces should be column name in data {{COLUMN-NAME}} </p>
+		</td>
+	</tr>
+	</tbody>
+</table>
+
+Following table describes the data attribute configuration
+
+Attribute | Mandatory/Optional | Values |  Default Value | Definition
+----------------- | -------- | ------------| -------- | ------------
+data-url |	mandatory | url |	| url to csv file in data.qld.gov.au
+data-zoom |	optional |	integer |	10 |	defines zoom size of map after search submit
+data-center |	optional |	lat,long |	-23,143 |	defines the center of map on page load
+data-set |	optional	| qgap, housing-service-centres, scd | |
+data-controlsposition |	optional |	BOTTOM, BOTTOM_CENTER, BOTTOM_LEFT, BOTTOM_RIGHT, CENTER, LEFT, LEFT_BOTTOM, LEFT_CENTER, LEFT_TOP, RIGT, RIGHT_BOTTOM, RIGHT_CENTER, RIGHT_TOP, TOP, TOP_CENTER, TOP_LEFT, TOP_RIGHT |	RIGHT_BOTTOM |	defines the position of map controls like street view contol, zoom control, etc.
+data-clustergridsize |	optional	| | integer |	defines area in pixels should form a cluster
+data-strictbounds |	optional |	true/false |	true, i.e. returns locations confined to Qld |	If you donot want autocomplete location to return results confined to Qld, set this value to false
+data-search-template |	optional | | |url to template you would like to display your search results
+data-location |	optional |	string (example : " , QLD")	| |in location input field, when user enters location, the input field will be appended by the value given.<br>For example, if data-location= ", QLD", and user enters "Richmond" in location input field, the value will be altered to "Richmond, QLD"
+data-orderby | optional | string (example: "Title") |   | search results will be displayed ordered by data-orderby value.<br>This value should be column name in data
+
+You can also include following pre-defined templates
+ - /assets/includes/dynamic/maps/search-result.html
+ - /assets/includes/dynamic/maps/search-result-qgap.html
+ - /assets/includes/dynamic/maps/search-result-housing-service-centres.html
+
+### User guide on data format in CSV files
+**Notes on operating hours for counters like QGAP, Housing centers etc**
+If a counter is open all day, simply put the opening time in the am column for that day and the closing time in the pm column. Example: 8:30, 17:00
+If a counter closes during a lunch period, specify a range in the am and pm columns. Example: ```8:30-12:00, 13:00-17:00```
+If a counter is open in the morning and closed for the afternoon, put a range in the am column and leave the pm column blank. Example: ```8:30-12:00```,
+Specify the normal operating hours for the counter. It is assumed counters will be closed on Queensland and local public holidays.
+Closure dates can be specified as a range. Separate multiple values with semi-colons. ```Example: 24/12/2012-1/1/2013; 1/2/2013``` means closed from 24 December 2012 through to 1 January 2013 (inclusive) and closed again on 1 February 2013. Only closures that are happening within the next 5 weeks will be displayed on the page.
+Custom (free text) messages can be included in the closure column. Example: ```after 1.30pm on 27, 28 and 31 December 2012```. Note: custom messages will always be displayed as the script cannot reliably determine the date of the closure.
+To remove a custom message, update your CSV file.
+Closure messages are displayed as text, with the lead-in phrase ‘We are closed’. Examples:
+
+Closure data type | CSV data | Displayed as 
+----------------- | -------- | ------------
+Date range |	24/12/2012-1/1/2013 |	We are closed 24 December 2012--1 January 2013.
+Custom |	after 1.30pm on 27, 28 and 31 December 2012 |	We are closed after 1.30pm on 27, 28 and 31 December 2012.
+Multiple dates |	24/12/2012-26/12/2012; 28/12/2012-1/1/2013 |	We are closed 24-26 December 2012 and 28 December 2012-1 January 2013.
+Mixed |	24/12/2012-26/12/2012; after 1.30pm on 27, 28 and 31 December 2012; 1/1/2013 |	We are closed 24--26 December 2012, after 1.30pm on 27, 28 and 31 December p2012 and 1 January 2013.
+
+Please discuss any additional requirements with the QGov Online team.
+
+## How to display view search result
+Include following code in your map/view/index.html. Make sure the text within the curly braces match the column names in your csv data.
 ```
 
-## Full HTML source code for Queensland Public Libraries (MAM pattern)
-### Complete HTML source for public libraries (MAM)
-```html
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-AU" lang="en-AU">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Queensland public libraries | About Queensland and its government | Queensland Government</title>
-    <!--#set var="franchise" value="About Queensland and its government"-->
-    <!--#set var="title" value="Queensland public libraries"-->
-    <!--#set var="licence" value="http://creativecommons.org/licenses/by/3.0/au/"-->
-    <!--#include virtual="/assets/includes/global/head-assets.html"-->
-    <meta name="fragment" content="!" />
-    <meta name="description" content="Find address and contact information for over 300 public libraries and Indigenous Knowledge Centres around Queensland." />
-    <meta name="keywords" content="state, library, libraries, Queensland, public, find, browse, directory" />
-    <link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" />
-    <link rel="schema.AGLSTERMS" href="http://www.agls.gov.au/agls/terms/" />
-    <meta name="DCTERMS.creator" scheme="AGLSTERMS.GOLD" content="c=AU; o=The State of Queensland; ou=Department of Science, Information Technology, Innovation and the Arts; ou=Smart Service Queensland" />
-    <meta name="DCTERMS.publisher" scheme="AGLSTERMS.AglsAgent" content="corporateName=The State of Queensland; jurisdiction=Queensland" />
-    <meta name="DCTERMS.created" content="2014-03-12" />
-    <meta name="DCTERMS.modified" content="2014-03-27" />
-    <meta name="DCTERMS.title" content="Queensland public libraries | About Queensland and its government" />
-    <meta name="DCTERMS.description" content="Find address and contact information for over 300 public libraries and Indigenous Knowledge Centres around Queensland." />
-    <meta name="DCTERMS.subject" scheme="AGLSTERMS.APAIS" content="Public libraries" />
-    <!--#include virtual="/assets/includes/global/head-meta-identifier.html"-->
-    <meta name="DCTERMS.type" scheme="DCTERMS.DCMIType" content="Document" />
-    <meta name="AGLSTERMS.documentType" scheme="AGLSTERMS.agls-document" content="dataset" />
-    <meta name="DCTERMS.audience" scheme="AGLSTERMS.agls-audience" content="all" />
-    <meta name="DCTERMS.jurisdiction" scheme="AGLSTERMS.AglsJuri" content="Queensland" />
-    <meta name="DCTERMS.license" scheme="DCTERMS.URI" content="http://creativecommons.org/licenses/by/3.0/au/" />
-</head>
-<body id="qld-gov-au" class="residents">
-    <!--#include virtual="/assets/includes/global/header.html"-->
-    <div id="page-container">
-        <div class="max-width">
-            <div id="breadcrumbs">
-                <h2>You are here:</h2>
-                <ol>
-                    <!--#include virtual="/assets/includes/global/breadcrumb-global.html"-->
-                    <li>
-                        <a href="../">Tests</a>
-                    </li>
-                    <li>
-                        <a href="./">Visual inspection tests</a>
-                    </li>
-                    <li class="last-child">Queensland public libraries</li>
-                </ol>
-            </div>
-            <div id="content-container">
-                <div id="content">
-                    <div class="article">
-                        <div class="box-sizing">
-                            <div class="border" id="article">
-                                <!--#include virtual="/assets/includes/global/global-alert.html"-->
-                                <h1>Queensland public libraries</h1>
-                                <!--#include virtual="/assets/includes/global/page-options-pre.html"-->
-                                <div id="app-viewport">
-                                    <!--#include virtual="/assets/includes/dynamic/opendata/index.php?${QUERY_STRING}&resource=96d6b499-e402-409c-9c91-e8c02f2801c8&scope=Name&searchby=title&view=libraries&debug=true" -->
-                                    <div id="dataset">
-                                        <a href="https://data.qld.gov.au/dataset/victim-support-services/resource/96d6b499-e402-409c-9c91-e8c02f2801c8">View the data</a>
-                                    </div>
-                                </div>
-                                <div id="app-viewport-tools-results" class="visuallyhidden">
-                                    <h2 class="resultset-title"></h2>
-                                    <a class="refine" href="#app-viewport-tools-search">Refine search</a>
-                                    <ol class="search-results">
-                                        <li>
-                                            <h3>
-                                                <a href="?title={{Name}}">{{Name}}</a>
-                                            </h3>
-                                            <p class="search-description">{{Description}}</p>
-                                            <p class="meta">{{Support services}}</p>
-                                        </li>
-                                    </ol>
-                                    <div class="pagination"></div>
-                                </div>
-                                <div id="view" class="visuallyhidden">
-                                    <div id="app-viewport-info">
-                                        <h2>{{Name}}</h2>
-                                        <div id="details" class="section">
-                                            <div>
-                                                <p>{{md:Service}}</p>
-                                                <dl class="contact">
-                                                    <dt>Phone:</dt>
-                                                    <dd>{{md:Contact}}</dd>
-                                                    <dt>Service region:</dt>
-                                                    <dd>{{Region}}</dd>
-                                                </dl>
-                                            </div>
-                                        </div>
-                                        {{compare:Description|Support services}}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end .article .box-sizing .border -->
-                </div>
-                <!-- end #content -->
-                <div id="asides">
-                    <div class="box-sizing">
-                        <div class="border">
-                            <!--#include virtual="/assets/includes/global/global-aside.html"-->
-                            <div id="search" class="aside search">
-                                <h2>Search</h2>
-                                <form id="app-viewport-tools-search">
-                                    <ol class="questions">
-                                        <li class="viewport search">
-                                            <label for="location" class="visuallyhidden">Enter location or postcode</label>
-                                            <input accesskey="5" type="search" name="location" id="location" size="30" value="" placeholder="Enter location or postcode" />
-                                            <input class="search-button lookup" type="image" name="app-geocoding" id="app-geocoding" src="" value="x" />
-                                        </li>
-                                        <li class="viewport search">
-                                            <label for="query" class="visuallyhidden">Enter search term</label>
-                                            <input accesskey="6" type="search" name="query" id="query" size="25" value="" placeholder="Enter search term" />
-                                            <input class="search-button" type="image" src="/assets/v2/images/skin/button-search.png" value="Search" />
-                                            <a href="#app-viewport" class="all">Show all results</a>
-                                        </li>
-                                    </ol>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end #asides, .box-sizing, .border -->
-                <div id="meta-wrapper">
-                    <div class="meta-box-sizing">
-                        <div class="border">
-                            <div id="document-properties">
-                                <div class="box-sizing">
-                                    <dl>
-                                        <dt class="visuallyhidden">Licence</dt>
-                                        <dd id="document-licence">
-                                            <a href="http://creativecommons.org/licenses/by/3.0/au/" rel="license" title="Text available under Creative Commons Attribution 3.0 Australia (CC BY 3.0) licence">
-                                                <img src="/assets/v2/images/licences/by-80x15.png" alt="Creative Commons Attribution 3.0 Australia (CC BY 3.0)" />
-                                            </a>
-                                        </dd>
-                                        <dt>Last updated</dt>
-                                        <dd>27 March 2014</dd>
-                                    </dl>
-                                </div>
-                            </div>
-                            <!--#include virtual="/assets/includes/global/page-options-post.html"-->
-                        </div>
-                    </div>
-                </div>
-                <!-- end #meta-wrapper, .meta-box-sizing, .border -->
-            </div>
-            <!-- end #content-container -->
-            <!--#include virtual="_nav-visual-tests.html"-->
-        </div>
-    </div>
-    <!-- end #page-container, .max-width -->
-    <!--#include virtual="/assets/includes/global/footer-page.html"-->
-    <!--#include virtual="/assets/includes/global/footer-stats.html"-->
-</body>
-</html>
+<a id="data-url" class="view-result"  data-title-column="Title" data-set="housing-service-centres" data-url="https://data.qld.gov.au/dataset/contact-a-housing-service-centre/resource/e29680e4-a5a1-4cdf-b24d-30b4f4dff307" data-strictbounds="true"></a>
+
+
+<div id="view-contact-info" class="view-csv-data visuallyhidden">
+	<div>[[<div class="status info"><h2>Attention</h2><p>{{Notes}}</p></div>]]</div>
+	<div>
+		<dl class="grid">
+			[[<dt>Email:</dt><dd><a href="mailto:{{Email}}">{{Email}}</a></dd>]]
+		    [[<dt>Phone:</dt><dd>{{md:Phone}}</dd>]]
+		    [[<dt>Fax:</dt><dd>{{Fax}}</dd>]]
+		    <dt>Address:</dt><dd class="location adr">[[{{Address 1}}]] [[<br> {{Address 2}}]] [[<br> {{Suburb}}]] Qld [[{{Postcode}}]]</dd>
+		    [[<dt>Services:</dt><dd>{{Services}}</dd>]]
+		</dl>
+	</div>
+</div>
+
+
+<!--//Additional comments explaining template
+//Square brackets implies, display content enclosed in square brackets only if content enclosed in curly brackets exists
+//Curly brackets would be the column names of your csv file. -->
+
 ```
+### How to customise via SSI includes or data-attributes
+Following table describes the SSI/ HTML element configuration
+<table>
+	<thead>
+	<tr>
+		<th>Display</th>
+		<th>HTML Element</th>
+		<th>What it does</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td>Data Element</td>
+		<td><pre>&lt;a id="data-url" class="view-result"  type="hidden" data-title-column="Title" data-set="housing-service-centres" <br>data-url="https://data.qld.gov.au/dataset/contact-a-housing-service-centre/resource/e29680e4-a5a1-4cdf-b24d-30b4f4dff307" data-strictbounds="true"&gt;&lt;/a&gt;</pre></td>
+		<td><p>class="view-result" is key to run scripts</p>
+			<p>Data from the mentioned data-url will be fetched and displayed in the view result. More information on its configuration is given in the table below.</p>
+		</td>
+	</tr>
+	<tr>
+		<td>View Result</td>
+		<td>
+			<p>Template:</p>
+			<pre>&lt;div id="view-contact-info" class="view-csv-data visuallyhidden"&gt;
+	&lt;div&gt;[[&lt;div class="status info"&gt;&lt;h2&gt;Attention&lt;/h2&gt;&lt;p&gt;{{Notes}}&lt;/p&gt;&lt;/div&gt;]]&lt;/div&gt;
+	&lt;div&gt;
+		&lt;dl class="grid"&gt;
+			[[&lt;dt&gt;Email:&lt;/dt&gt;&lt;dd&gt;&lt;a href="mailto:{{Email}}"&gt;{{Email}}&lt;/a&gt;&lt;/dd&gt;]]
+		    [[&lt;dt&gt;Phone:&lt;/dt&gt;&lt;dd&gt;{{md:Phone}}&lt;/dd&gt;]]
+		    [[&lt;dt&gt;Fax:&lt;/dt&gt;&lt;dd&gt;{{Fax}}&lt;/dd&gt;]]
+		    &lt;dt&gt;Address:&lt;/dt&gt;&lt;dd class="location adr"&gt;[[{{Address 1}}]] [[&lt;br&gt; {{Address 2}}]] [[&lt;br&gt; {{Suburb}}]] Qld [[{{Postcode}}]]&lt;/dd&gt;
+		    [[&lt;dt&gt;Services:&lt;/dt&gt;&lt;dd&gt;{{Services}}&lt;/dd&gt;]]
+		&lt;/dl&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</pre>
+		</td>
+		<td>
+			<p>It is important to have class="view-csv-data" to every &lt;div&gt; that is a template.</p>
+			<p>Value inside curly braces shoult be column name in data {{COLUMN-NAME}} </p>
+			<p>Data will be processed to display according to the format described in templates	</p>
+		</td>
+	</tr>
+	</tbody>
+</table>
 
-## Using the BAM (Big Awesome Map) page model
-If the primary feature of your content is the map, then consider using the BAM pattern. This places the map front and centre across all 3 columns on desktop browsers, using the [large application page model](https://govdex.gov.au/confluence/display/SSQSWE/Page+Model+API).
+Following table describes the data attribute configuration
 
-### Full HTML source code for Queensland Public Libraries (BAM pattern)
-#### Complete HTML source for public libraries
-```html
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-AU" lang="en-AU">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Queensland public libraries | About Queensland and its government | Queensland Government</title>
-<!--#set var="franchise" value="About Queensland and its government"-->
-<!--#set var="title" value="Queensland public libraries"-->
-<!--#set var="licence" value="http://creativecommons.org/licenses/by/3.0/au/"-->
-<!--#include virtual="/assets/includes/global/head-assets.html"-->
-    <meta name="description" content="Find address and contact information for over 300 public libraries and Indigenous Knowledge Centres around Queensland." />
-    <meta name="keywords" content="state, library, libraries, Queensland, public, find, browse, directory" />
-    <link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" />
-    <link rel="schema.AGLSTERMS" href="http://www.agls.gov.au/agls/terms/" />
-     
-    <meta name="DCTERMS.creator" scheme="AGLSTERMS.GOLD" content="c=AU; o=The State of Queensland; ou=Department of Science, Information Technology, Innovation and the Arts; ou=Smart Service Queensland" />
-    <meta name="DCTERMS.publisher" scheme="AGLSTERMS.AglsAgent" content="corporateName=The State of Queensland; jurisdiction=Queensland" />
-    <meta name="DCTERMS.created" content="2013-10-25" />
-    <meta name="DCTERMS.modified" content="2014-01-17" />
-    <meta name="DCTERMS.title" content="Queensland public libraries | About Queensland and its government" />
-    <meta name="DCTERMS.description" content="Find address and contact information for over 300 public libraries and Indigenous Knowledge Centres around Queensland." />
-    <meta name="DCTERMS.subject" scheme="AGLSTERMS.APAIS" content="Public libraries" />
-<!--#include virtual="/assets/includes/global/head-meta-identifier.html"-->
-    <meta name="DCTERMS.type" scheme="DCTERMS.DCMIType" content="Document" />
-    <meta name="AGLSTERMS.documentType" scheme="AGLSTERMS.agls-document" content="dataset" />
-    <meta name="DCTERMS.audience" scheme="AGLSTERMS.agls-audience" content="all" />
-    <meta name="DCTERMS.jurisdiction" scheme="AGLSTERMS.AglsJuri" content="Queensland" />
-    <meta name="DCTERMS.license" scheme="DCTERMS.URI" content="http://creativecommons.org/licenses/by/3.0/au/" />
-</head>
-<body id="qld-gov-au" class="residents large-application">
-<!--#include virtual="/assets/includes/global/header.html"-->
-     
-    <div id="page-container"><div class="max-width">
-        <div id="breadcrumbs">
-            <h2>You are here:</h2>
-            <ol>
-<!--#include virtual="/assets/includes/global/breadcrumb-agency.html"-->
-                <li><a href="/about/">About Queensland and its government</a></li>
-                <li><a href="/about/about-queensland/">About Queensland</a></li>
-                <li class="last-child">Queensland public libraries</li>
-            </ol>
-        </div>
-     
-        <div id="content-container">
-            <div id="content">
-                <div class="article"><div class="box-sizing"><div class="border">
-                    <!--#include virtual="/assets/includes/global/global-alert.html"-->
-                    <h1>Queensland public libraries</h1>
-                     
-                    <!--#include virtual="/assets/includes/global/page-options-pre.html"-->
-                    <div id="large-application">
-                        <div id="app-viewport-tools">
-                            <form id="app-viewport-tools-search">
-                                <ol class="questions">
-                                    <li class="viewport search">
-                                        <label for="query" class="visuallyhidden">Enter search term</label>
-                                        <input accesskey="5" type="search" name="query" id="query" size="25" value="" placeholder="Enter search term" />
-                                        <input class="search-button" type="image" src="/assets/v2/images/skin/button-search.png" value="Search" />
-                                        <a href="#app-viewport" class="all">Show all</a>
-                                    </li>
-                                </ol>
-                            </form>
-                            <div id="app-viewport-tools-results">
-                                <h2 class="resultset-title"></h2>
-                                <a class="refine" href="#app-viewport-tools-search">Refine search</a>
-                                <ol class="search-results">
-                                    <li>
-                                        <h3><a href="?title={{Library Name}}">{{Library Name}}</a></h3>
-                                        <p class="search-description">{{Address Line 1}}</p>
-                                        <p class="meta">{{Locality}}</p>
-                                    </li>
-                                </ol>
-                                <div class="pagination"></div>
-                            </div>
-                        </div>
-                        <div id="app-viewport">
-                            <div id="dataset">
-                                <a href="https://data.qld.gov.au/dataset/public-libraries/resource/7c68ac60-cbb4-4450-89fb-89d917ae3b34">View the data</a>
-                            </div>
-                            <div class="visuallyhidden">
-                                <table id="app-viewport-data">
-                                    <thead>
-                                        <tr>
-                                            <th>Library</th>
-                                            <th>Address</th>
-                                            <th>Locality</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="data-container">
-                                        <tr>
-                                            <th>{{Library Name}}</th>
-                                            <td>{{Address Line 1}} {{Address Line 2}}</td>
-                                            <td>{{Locality}} {{Postcode}}</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <ul id="app-viewport-controls">
-                                <!-- <li><a href="#key-sectors">Legend</a></li> -->
-                                <!-- <li><a href="#about-directory">About</a></li> -->
-                                <li><a href="#app-viewport-data">Data</a></li>
-                            </ul>
-                        </div>
-                        <div id="app-viewport-info">
-                            <h2>{{Library Name}}</h2>
-                            <div id="description">
-                                <p>{{Address Line 1}}<br />
-                                {{Address Line 2}}</p>
-                                <p>{{Locality}} {{Postcode}}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div></div></div><!-- end .article .box-sizing .border -->
-            </div><!-- end #content -->
-            <div id="meta-wrapper"><div class="meta-box-sizing"><div class="border">
-                <div id="document-properties"><div class="box-sizing">
-                    <dl>
-                        <dt class="visuallyhidden">Licence</dt>
-                        <dd id="document-licence">
-                            <a href="http://creativecommons.org/licenses/by/3.0/au/" rel="license" title="Text available under Creative Commons Attribution 3.0 Australia (CC BY 3.0) licence"><img src="/assets/v2/images/licences/by-80x15.png" alt="Creative Commons Attribution 3.0 Australia (CC BY 3.0)"/></a>
-                        </dd>
-                        <dt>Last updated</dt>
-                        <dd>17 January 2014</dd>
-                    </dl>
-                </div></div>
-<!--#include virtual="/assets/includes/global/page-options-post.html"-->
-            </div></div></div><!-- end #meta-wrapper, .meta-box-sizing, .border -->
-        </div><!-- end #content-container -->
-    </div></div><!-- end #page-container, .max-width -->
-<!--#include virtual="/assets/includes/global/footer-page.html"-->
-<!--#include virtual="/assets/includes/global/footer-stats.html"-->
-</body>
-</html>
-```
+Attribute |	Mandatory/Optional |	Values |	Default Value |	Definition
+----------|------------------- |-----------|------------------|-----------
+data-url |	mandatory |	url	 | |url to csv file in data.qld.gov.au
+data-title-column |	mandatory | | |Column name in which application should look for search term i.e. ?title='value
+data-set |	optional | qgap, housing-service-centres, scd | |
 
+You can also include following pre-defined templates
+- /assets/includes/dynamic/maps/view-closure.html
+- /assets/includes/dynamic/maps/view-contact-info.html
+- /assets/includes/dynamic/maps/view-opening-hours.html
+- /assets/includes/dynamic/maps/view-static-map.html
