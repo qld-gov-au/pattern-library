@@ -2,6 +2,7 @@
 
 - [Figures (images, diagrams, captions)](#figures-images-diagrams-captions)
 - [Data tables (sortable tables)](#data-tables-sortable-tables)
+- [Definition list grid layout](#definition-list-grid-layout)
 - [Downloadable document link](#downloadable-document-link)
 - [Meta links](#meta-links)
 - [Pull-quote](#pull-quote)
@@ -174,6 +175,28 @@ Best practice and usage:
 Notes:
 - You can find useful information about how set up data tables from the usage section: https://datatables.net/usage
 
+## Definition list grid layout
+
+Definition lists exist in HTML to pair definitions with values and can be useful for presenting contact details, confirming form inputs and other simple data structures.
+
+### XHTML 1.0
+
+Use the class `grid` with your definition list for a responsive layout: table-like on wider displays, linear on narrow devices.
+
+```html
+<dl class="grid">
+    <dt id="phone">Phone:</dt>
+    <dd>13 23 80</dd>
+
+    <dt id="fax">Fax:</dt>
+    <dd>(07) 4091 2668</dd>
+    …
+</dl>
+```
+
+### Screenshot
+![Definition list grid](images/dl-grid.png)
+
 ## Downloadable document link
 
 The following approach allows the 'title' to be underlined without the 'meta' being underlined in all browsers.
@@ -272,6 +295,9 @@ Order contact details as follows:
 - Address---**only if** there is a counter service available to government customers.
 
 Use [hCard](http://microformats.org/wiki/hcard)
+
+Can be combined with the [definition list grid layout](#definition-list-grid-layout) shown above.
+
 ### XHTML 1.0
 ```html
 <div class="vcard">
