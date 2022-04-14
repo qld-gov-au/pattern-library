@@ -2,6 +2,15 @@
 
 The **Single Website Experience (SWE)** is a frontend framework used for www.qld.gov.au 
 
+ Documentation now located here: [Single Website Experience](https://www.forgov.qld.gov.au/information-and-communication-technology/communication-and-publishing/website-and-digital-publishing/website-standards-guidelines-and-templates/swe) 
+
+
+<details><summary>Legacy Documentation</summary>
+
+Please visit point in time for source documents https://github.com/qld-gov-au/pattern-library/tree/9ebce75c3ff9545977ee73d6d06e4a60987ccc5a
+
+<p>
+
 - **SWE 3** is a rapid protoyping framework, built on bootstrap 3
 	- SWE 3 is used for all new websites
 	- **SWE 3 replaces SWE 2**
@@ -168,5 +177,5 @@ The [AGLS Document Vocabulary Encoding Scheme](http://www.agls.gov.au/documents/
 
 
 
-
-
+</p>
+</details>
